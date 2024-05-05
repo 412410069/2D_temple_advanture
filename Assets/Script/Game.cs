@@ -140,7 +140,7 @@ public class Game : MonoBehaviour
     }
 
     private void PlayerMeetMine(){
-    
+        //hey
     }
     private void Reavel(){
         int x = playerMovement.position.x;
@@ -150,7 +150,7 @@ public class Game : MonoBehaviour
         if(cell.type == Cell.Type.Empty){
             Flood(cell);
         }
-
+        //hey hey
         cell.revealed = true;
         state[x, y] = cell;
         board.Draw(state);
