@@ -16,6 +16,7 @@ public class Game : MonoBehaviour
     private Cell[,] state;
     public PlayerState playerState;
     public GameObject player;
+    public MainMenu mainMenu;
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
@@ -163,6 +164,7 @@ public class Game : MonoBehaviour
                 Debug.Log("meet mine!");
                 playerState.meetMine = true;
                 playerState.gameOver = true;
+                // mainMenu.gameOver();             //還沒辦法找到ExitScene
             }
         }
     }
