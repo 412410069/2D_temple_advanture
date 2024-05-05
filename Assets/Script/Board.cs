@@ -52,10 +52,12 @@ public class Board : MonoBehaviour
 
     private Tile GetRevealTile(Cell cell){
         switch (cell.type)
-        {
+        {   
             case Cell.Type.Empty: return tileEmpty;
             case Cell.Type.Mine: return tileMine;
             case Cell.Type.Number: return GetNumberTile(cell);
+            case Cell.Type.Wall: return tileWall;
+            case Cell.Type.Void: return tileVoid;
             default: return null;
         }
     }

@@ -54,6 +54,7 @@ public class Game : MonoBehaviour
         for(int x = width / 4 - 1; x < width / 4 * 3 + 1; x++){
             for(int y = height / 4 - 1; y < height / 4 * 3 + 1; y++){
                 state[x ,y].type = Cell.Type.Wall;
+                state[x ,y].revealed = true;
             }
         }
         for(int x = width / 4; x < width / 4 * 3; x++){
@@ -90,18 +91,9 @@ public class Game : MonoBehaviour
             int x = Random.Range(0, width);
             int y = Random.Range(0, height);
             
-            while(state[x, y].type == Cell.Type.Mine){
-                x++;
-                if(x == width){
-                    x = 0;
-                    y++;
-                    if(y == height){
-                        y = 0;
-                    }
-                }
+            if(state[x, y].type == Cell.Type.Empty){
+                state[x, y].type = Cell.Type.Mine;
             }
-
-            state[x, y].type = Cell.Type.Mine;
         }
     }
 
