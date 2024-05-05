@@ -305,8 +305,8 @@ MonoBehaviour:
   tileNum6: {fileID: 11400000, guid: 2749cc6c2e089a94dbfe0d4bcdf369d3, type: 2}
   tileNum7: {fileID: 11400000, guid: 3cabc5595ab6f4a48993746037779ee9, type: 2}
   tileNum8: {fileID: 11400000, guid: a024f0ec3c7ea0c4f9e2688e4c77b60f, type: 2}
-  tileWall: {fileID: 0}
-  tileVoid: {fileID: 0}
+  tileWall: {fileID: 11400000, guid: 3bd0c7c51a16804468adfa1189f4d3e7, type: 2}
+  tileVoid: {fileID: 11400000, guid: 1f98f6970b7fce24a97d80bfb07728b6, type: 2}
 --- !u!1 &247440031
 GameObject:
   m_ObjectHideFlags: 0
