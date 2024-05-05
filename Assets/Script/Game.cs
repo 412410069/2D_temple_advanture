@@ -148,7 +148,7 @@ public class Game : MonoBehaviour
     }
 
     private void PlayerMeetMine(){
-    
+        //hey
     }
     private void Reavel(){
         int x = playerMovement.position.x;
