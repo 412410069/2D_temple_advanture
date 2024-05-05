@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {   
     public PlayerState player;
     public float speed;
+    public Cell cell;
 
     void Awake()
     {

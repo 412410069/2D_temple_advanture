@@ -143,8 +143,13 @@ public class Game : MonoBehaviour
     void Update()
     {
         Reavel();
+        PlayerMeetMine();
+        
     }
 
+    private void PlayerMeetMine(){
+        // if(player.position)
+    }
     private void Reavel(){
         int x = playerMovement.position.x;
         int y = playerMovement.position.y;

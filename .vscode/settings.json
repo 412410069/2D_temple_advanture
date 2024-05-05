@@ -56,7 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Final Project Sweeper.sln",
+    "dotnet.defaultSolution": "2D_temple_advanture.sln",
     "editor.codeLens": true,
     "merge-conflict.codeLens.enabled": true,
     "dotnet.codeLens.enableReferencesCodeLens": false
