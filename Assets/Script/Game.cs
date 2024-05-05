@@ -10,15 +10,16 @@ public class Game : MonoBehaviour
     public int width = 32;
     public int height = 32;
     public int mineNum = 80;
+    
 
     private Board board;
     private Cell[,] state;
-    public PlayerState playerMovement;
+    public PlayerState playerState;
     public GameObject player;
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
+        playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -68,8 +69,9 @@ public class Game : MonoBehaviour
         int x = 16;
         int y = 16;
         GenerateSafeZone(x, y);
-        playerMovement.position = new Vector3Int(x, y, 0);
+        playerState.position = new Vector3Int(x, y, 0);
         player.transform.position = new Vector3Int(x, y, 0);
+        playerState.meetMine = false;
     }
 
     private void GenerateSafeZone(int playerX, int playerY){
@@ -139,12 +141,21 @@ public class Game : MonoBehaviour
         
     }
 
-    private void PlayerMeetMine(){
-        //hey
+    private bool PlayerMeetMine(){
+        PlayerState playerState = new PlayerState();
+        Vector2 vec = GetComponent<Transform>().position;
+        int y = (int)vec.y;
+        int x = (int)vec.x;
+        if(!playerState.gameOver&& !playerState.isMoving){
+            if(state[x, y].type == Cell.Type.Mine){
+                playerState.meetMine = true;
+            }
+        }
+        return true;
     }
     private void Reavel(){
-        int x = playerMovement.position.x;
-        int y = playerMovement.position.y;
+        int x = playerState.position.x;
+        int y = playerState.position.y;
         Cell cell = state[x, y];
         
         if(cell.type == Cell.Type.Empty){

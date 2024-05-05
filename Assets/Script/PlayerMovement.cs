@@ -30,19 +30,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void PlayerInput(){
-        if(Input.GetKeyDown(KeyCode.W) == true){
+        if(!player.gameOver && Input.GetKeyDown(KeyCode.W) == true){
             player.facing = PlayerState.Facing.Up;
             player.position += new Vector3Int(0, 1, 0);
         }
-        if(Input.GetKeyDown(KeyCode.S) == true){
+        if(!player.gameOver && Input.GetKeyDown(KeyCode.S) == true){
             player.facing = PlayerState.Facing.Down;
             player.position += new Vector3Int(0, -1, 0);
         }
-        if(Input.GetKeyDown(KeyCode.A) == true){
+        if(!player.gameOver && Input.GetKeyDown(KeyCode.A) == true){
             player.facing = PlayerState.Facing.Left;
             player.position += new Vector3Int(-1, 0, 0);
         }
-        if(Input.GetKeyDown(KeyCode.D) == true){
+        if(!player.gameOver && Input.GetKeyDown(KeyCode.D) == true){
             player.facing = PlayerState.Facing.Right;
             player.position += new Vector3Int(1, 0, 0);
         }
