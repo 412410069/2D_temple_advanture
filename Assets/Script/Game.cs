@@ -44,7 +44,7 @@ public class Game : MonoBehaviour
                 Cell cell = new Cell();
                 cell.position = new Vector3Int(x, y, 0);
                 cell.type = Cell.Type.Void;
-                cell.revealed = false;
+                cell.revealed = true;
                 state[x, y] = cell;
             }
         }
@@ -54,12 +54,12 @@ public class Game : MonoBehaviour
         for(int x = width / 4 - 1; x < width / 4 * 3 + 1; x++){
             for(int y = height / 4 - 1; y < height / 4 * 3 + 1; y++){
                 state[x ,y].type = Cell.Type.Wall;
-                state[x ,y].revealed = true;
             }
         }
         for(int x = width / 4; x < width / 4 * 3; x++){
             for(int y = height / 4; y < height / 4 * 3; y++){
                 state[x ,y].type = Cell.Type.Empty;
+                state[x ,y].revealed = false;
             }
         }    
     }
