@@ -141,18 +141,6 @@ public class Game : MonoBehaviour
         
     }
 
-    private bool PlayerMeetMine(){
-        PlayerState playerState = new PlayerState();
-        Vector2 vec = GetComponent<Transform>().position;
-        int y = (int)vec.y;
-        int x = (int)vec.x;
-        if(!playerState.gameOver&& !playerState.isMoving){
-            if(state[x, y].type == Cell.Type.Mine){
-                playerState.meetMine = true;
-            }
-        }
-        return true;
-    }
     private void Reavel(){
         int x = playerState.position.x;
         int y = playerState.position.y;
@@ -165,6 +153,18 @@ public class Game : MonoBehaviour
         cell.revealed = true;
         state[x, y] = cell;
         board.Draw(state);
+    }
+
+    private void PlayerMeetMine(){
+        int x = playerState.position.x;
+        int y = playerState.position.y;
+        if(!playerState.gameOver && !playerState.isMoving){
+            if(state[x, y].type == Cell.Type.Mine){
+                Debug.Log("meet mine!");
+                playerState.meetMine = true;
+                playerState.gameOver = true;
+            }
+        }
     }
 
     private void Flood(Cell cell){
