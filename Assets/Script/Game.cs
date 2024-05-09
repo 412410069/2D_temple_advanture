@@ -176,9 +176,13 @@ public class Game : MonoBehaviour
 
         if(cell.type == Cell.Type.Empty){
             Flood(state[cell.position.x + 1, cell.position.y]);
-            Flood(state[cell.position.x - 1, cell.position.y]);
+            Flood(state[cell.position.x + 1, cell.position.y + 1]);
             Flood(state[cell.position.x, cell.position.y + 1]);
+            Flood(state[cell.position.x - 1, cell.position.y + 1]);
+            Flood(state[cell.position.x - 1, cell.position.y]);
+            Flood(state[cell.position.x - 1, cell.position.y - 1]);
             Flood(state[cell.position.x, cell.position.y - 1]);
+            Flood(state[cell.position.x + 1, cell.position.y - 1]);
         }
     }
 }
