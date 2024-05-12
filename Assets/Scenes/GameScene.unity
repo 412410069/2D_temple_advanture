@@ -368,8 +368,10 @@ MonoBehaviour:
   width: 32
   height: 32
   mineNum: 150
-  playerMovement: {fileID: 0}
+  playerState: {fileID: 0}
   player: {fileID: 0}
+  mainMenu: {fileID: 0}
+  exitScene: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +957,8 @@ MonoBehaviour:
   facing: 0
   position: {x: 0, y: 0, z: 0}
   isMoving: 0
+  meetMine: 0
+  gameOver: 0
 --- !u!1 &1815366464
 GameObject:
   m_ObjectHideFlags: 0

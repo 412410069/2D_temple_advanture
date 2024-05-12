@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
     public PlayerState playerState;
     public GameObject player;
     public MainMenu mainMenu;
+    public GameObject exitScene;
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
@@ -39,7 +40,6 @@ public class Game : MonoBehaviour
 
         board.Draw(state);
     }
-
     private void GenerateCells(){
         for(int x = 0; x < width; x++){
             for(int y = 0; y < height; y++){
@@ -164,7 +164,7 @@ public class Game : MonoBehaviour
                 Debug.Log("meet mine!");
                 playerState.meetMine = true;
                 playerState.gameOver = true;
-                // mainMenu.gameOver();             //還沒辦法找到ExitScene
+                gameOver();             //還沒辦法找到ExitScene
             }
         }
     }
@@ -186,5 +186,8 @@ public class Game : MonoBehaviour
             Flood(state[cell.position.x, cell.position.y - 1]);
             Flood(state[cell.position.x + 1, cell.position.y - 1]);
         }
+    }
+    public void gameOver(){     //記得沒有辦法找到Scene
+        exitScene.SetActive(true);
     }
 }
