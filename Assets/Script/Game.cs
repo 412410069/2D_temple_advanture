@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -187,6 +188,11 @@ public class Game : MonoBehaviour
             Flood(state[cell.position.x + 1, cell.position.y - 1]);
         }
     }
+
+    public void backToMainMenu(){
+        SceneManager.LoadSceneAsync(0);
+    }
+
     public void gameOver(){     //記得沒有辦法找到Scene
         exitScene.SetActive(true);
     }
