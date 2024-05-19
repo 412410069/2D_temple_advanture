@@ -14,5 +14,6 @@ public class PlayerState : MonoBehaviour
     public Vector3Int position;
     public bool isMoving;
     public bool meetMine;
+    public bool meetMonster;
     public bool gameOver;
 }

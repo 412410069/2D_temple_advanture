@@ -140,7 +140,7 @@ public class Game : MonoBehaviour
     {
         Reavel();
         PlayerMeetMine();
-        
+        // PlayerMeetMonster();
     }
 
     private void Reavel(){
@@ -169,6 +169,18 @@ public class Game : MonoBehaviour
             }
         }
     }
+    // private void PlayerMeetMonster(){           //我還不知道怪物到底是怎麼寫出來
+    //     int x = playerState.position.x;
+    //     int y = playerState.position.y;
+    //     if(!playerState.gameOver && !playerState.isMoving){
+    //         if(state[x, y].type == Cell.Type.Monster){
+    //             Debug.Log("meet Monster!");
+    //             playerState.meetMonster = true;
+    //             playerState.gameOver = true;
+    //             gameOver();             //還沒辦法找到ExitScene
+    //         }
+    //     }
+    // }
 
     private void Flood(Cell cell){
         if(cell.revealed) return;
