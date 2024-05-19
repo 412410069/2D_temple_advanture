@@ -21,7 +21,7 @@ public class Game : MonoBehaviour
     public GameObject exitScene;
     public GameObject shield;
     public float shieldOpenTime;
-    public float defultShieldOpenTime;
+    public float defultShieldOpenTime = 3;
     public float shieldTimer;
     public float secondRate = 1;
 
@@ -203,7 +203,7 @@ public class Game : MonoBehaviour
                 shieldTimer = 0;
             }
         }
-        if(playerState.isShieldOpen && shieldOpenTime <= 0){
+        if(playerState.isShieldOpen && shieldOpenTime == 0){
             closeShield();
         }
     }
@@ -218,7 +218,7 @@ public class Game : MonoBehaviour
         Debug.Log("Shield closed");
         playerState.isShieldOpen = false;
         shield.SetActive(false);
-        shieldOpenTime = 0;
+        shieldOpenTime = -1;
     }
 
     private void Flood(Cell cell){
