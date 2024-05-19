@@ -23,7 +23,7 @@ public class Game : MonoBehaviour
     public float shieldOpenTime;
     public float defultShieldOpenTime = 3;
     public float shieldTimer;
-    public float secondRate = 1;
+    public float secondRate = 1; 
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
@@ -238,6 +238,7 @@ public class Game : MonoBehaviour
             
         }
     }
+
 
     private Cell GetCell(int x, int y){
         if (IsVaild(x,y)){
