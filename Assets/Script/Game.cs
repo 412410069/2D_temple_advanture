@@ -14,7 +14,7 @@ public class Game : MonoBehaviour
     
 
     private Board board;
-    private Cell[,] state;
+    public Cell[,] state;
     public PlayerState playerState;
     public GameObject player;
     public MainMenu mainMenu;
