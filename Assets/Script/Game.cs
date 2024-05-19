@@ -19,6 +19,11 @@ public class Game : MonoBehaviour
     public GameObject player;
     public MainMenu mainMenu;
     public GameObject exitScene;
+    public GameObject shield;
+    public float shieldOpenTime;
+    public float defultShieldOpenTime;
+    public float shieldTimer;
+    public float secondRate = 1;
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
@@ -141,6 +146,8 @@ public class Game : MonoBehaviour
         Reavel();
         PlayerMeetMine();
         // PlayerMeetMonster();
+        itemShield();
+        
     }
 
     private void Reavel(){
@@ -160,7 +167,7 @@ public class Game : MonoBehaviour
     private void PlayerMeetMine(){
         int x = playerState.position.x;
         int y = playerState.position.y;
-        if(!playerState.gameOver && !playerState.isMoving){
+        if(!playerState.gameOver && !playerState.isMoving && !playerState.isShieldOpen){
             if(state[x, y].type == Cell.Type.Mine){
                 Debug.Log("meet mine!");
                 playerState.meetMine = true;
@@ -181,6 +188,38 @@ public class Game : MonoBehaviour
     //         }
     //     }
     // }
+
+    private void itemShield(){
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Keypad1) == true){
+            openShield();
+        }
+
+        if(shieldTimer < secondRate){           //控制真實秒數時間
+            shieldTimer += Time.deltaTime;
+        }
+        else{
+            if(shieldOpenTime > 0){
+                shieldOpenTime -= 1;
+                shieldTimer = 0;
+            }
+        }
+        if(playerState.isShieldOpen && shieldOpenTime <= 0){
+            closeShield();
+        }
+    }
+
+    private void openShield(){      //開啟護盾的數秒內，碰到炸彈不會結束遊戲
+        Debug.Log("Shield open!");
+        playerState.isShieldOpen = true;
+        shieldOpenTime = defultShieldOpenTime;
+        shield.SetActive(true);
+    }
+    private void closeShield(){ 
+        Debug.Log("Shield closed");
+        playerState.isShieldOpen = false;
+        shield.SetActive(false);
+        shieldOpenTime = 0;
+    }
 
     private void Flood(Cell cell){
         if(cell.revealed) return;
