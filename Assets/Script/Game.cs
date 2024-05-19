@@ -147,7 +147,7 @@ public class Game : MonoBehaviour
         PlayerMeetMine();
         // PlayerMeetMonster();
         itemShield();
-        
+        searchMine();
     }
 
     private void Reavel(){
@@ -219,6 +219,37 @@ public class Game : MonoBehaviour
         playerState.isShieldOpen = false;
         shield.SetActive(false);
         shieldOpenTime = -1;
+    }
+
+    private void searchMine(){
+        Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
+        Cell cell = GetCell(cellPosition.x,cellPosition.y); 
+        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
+            if (cell.type == Cell.Type.Empty){
+                Flood(cell);
+            }
+            else if (cell.revealed){
+                return;
+            }
+            cell.revealed = true;
+            state[cellPosition.x,cellPosition.y] = cell;
+            board.Draw(state);    
+            
+        }
+    }
+
+    private Cell GetCell(int x, int y){
+        if (IsVaild(x,y)){
+            return state[x,y];
+        }
+        else{
+            return new Cell();
+        }
+    }
+
+    private bool IsVaild(int x, int y){
+        return x >= 0 && x < width && y >= 0 && y < height; 
     }
 
     private void Flood(Cell cell){
