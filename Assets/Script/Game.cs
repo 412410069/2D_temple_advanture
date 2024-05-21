@@ -127,7 +127,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    void GenerateMonster1()
+    private void GenerateMonster1()
     {
         for (int i = 0; i < numberOfClones; i++)
         {
