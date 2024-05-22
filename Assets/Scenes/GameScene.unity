@@ -1190,7 +1190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a9e1957e958cf45a8218b2a8daaeb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster1: {fileID: 1689902262}
+  game: {fileID: 0}
   moveDistance: 1
   moveInterval: 1
 --- !u!1 &1708520155
@@ -1516,9 +1516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633b62b18d576b4382254ee674a46de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
+  game: {fileID: 0}
   monster1: {fileID: 1689902262}
-  numberOfClones: 5
+  numberOfClones: 50
 --- !u!4 &1811878604
 Transform:
   m_ObjectHideFlags: 0

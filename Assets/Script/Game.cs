@@ -52,6 +52,7 @@ public class Game : MonoBehaviour
         board.Draw(state);
         monster1.GenerateMonster1();
     }
+    
     private void GenerateCells(){
         for(int x = 0; x < width; x++){
             for(int y = 0; y < height; y++){
