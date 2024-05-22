@@ -18,7 +18,7 @@ public class Game : MonoBehaviour
     private Board board;
     public Cell[,] state;
     public PlayerState playerState;
-    public Monster1Initial monster1;
+    public MonsterInitial monster1;
     public GameObject player;
     public MainMenu mainMenu;
     public GameObject exitScene;
@@ -32,7 +32,7 @@ public class Game : MonoBehaviour
         board = GetComponentInChildren<Board>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
-        monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<Monster1Initial>();
+        monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
     }
 
     private void Start(){
