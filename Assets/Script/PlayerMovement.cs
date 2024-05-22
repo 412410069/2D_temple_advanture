@@ -1,22 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {   
-    public PlayerState player;
+    public PlayerState playerState;
     public float speed;
     public Cell cell;
+    public Game game;
 
     void Awake()
     {
-        player = GetComponent<PlayerState>();
+        playerState = GetComponent<PlayerState>();
+        game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
     }
 
     void Update()
     {   
         IsMovingCheck();
-        if(!player.isMoving){
+        if(!playerState.isMoving){
             PlayerInput();
         }
         else{
@@ -25,30 +29,43 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void IsMovingCheck(){
-        if(transform.position != player.position) player.isMoving = true;
-        else player.isMoving = false;
+        if(transform.position != playerState.position) playerState.isMoving = true;
+        else playerState.isMoving = false;
     }
 
     private void PlayerInput(){
-        if(!player.gameOver && Input.GetKeyDown(KeyCode.W) == true){
-            player.facing = PlayerState.Facing.Up;
-            player.position += new Vector3Int(0, 1, 0);
+        int x = playerState.position.x;
+        int y = playerState.position.y;
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.W) == true){
+            playerState.facing = PlayerState.Facing.Up;
+            if(game.state[x, y + 1].type != Cell.Type.Wall){
+                playerState.position += new Vector3Int(0, 1, 0);
+            }
         }
-        if(!player.gameOver && Input.GetKeyDown(KeyCode.S) == true){
-            player.facing = PlayerState.Facing.Down;
-            player.position += new Vector3Int(0, -1, 0);
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.S) == true){
+            playerState.facing = PlayerState.Facing.Down;
+            if(game.state[x, y - 1].type != Cell.Type.Wall){
+                playerState.position += new Vector3Int(0, -1, 0);
+            }
         }
-        if(!player.gameOver && Input.GetKeyDown(KeyCode.A) == true){
-            player.facing = PlayerState.Facing.Left;
-            player.position += new Vector3Int(-1, 0, 0);
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.A) == true){
+            playerState.facing = PlayerState.Facing.Left;
+            if(game.state[x - 1, y].type != Cell.Type.Wall){
+                playerState.position += new Vector3Int(-1, 0, 0);
+            }
         }
-        if(!player.gameOver && Input.GetKeyDown(KeyCode.D) == true){
-            player.facing = PlayerState.Facing.Right;
-            player.position += new Vector3Int(1, 0, 0);
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.D) == true){
+            playerState.facing = PlayerState.Facing.Right;
+            if(game.state[x + 1, y].type != Cell.Type.Wall){
+                playerState.position += new Vector3Int(1, 0, 0);
+            }
         }
     }
 
     private void PlayerMove(){
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, playerState.position, speed * Time.deltaTime);
+    }
+    private void PlayerMeetWall(char keyDirection){
+
     }
 }
