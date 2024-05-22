@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.Collections;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -11,14 +13,13 @@ public class Game : MonoBehaviour
     public int width = 32;
     public int height = 32;
     public int mineNum = 80;
-    public int numberOfClones = 5;
     
 
     private Board board;
     public Cell[,] state;
     public PlayerState playerState;
+    public Monster1Initial monster1;
     public GameObject player;
-    public GameObject monster1;
     public MainMenu mainMenu;
     public GameObject exitScene;
     public GameObject shield;
@@ -31,6 +32,7 @@ public class Game : MonoBehaviour
         board = GetComponentInChildren<Board>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
+        monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<Monster1Initial>();
     }
 
     private void Start(){
@@ -45,7 +47,7 @@ public class Game : MonoBehaviour
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
-        GenerateMonster1();
+        monster1.GenerateMonster1();
 
         board.Draw(state);
     }
@@ -124,18 +126,6 @@ public class Game : MonoBehaviour
                     state[x, y].type = Cell.Type.Number;
                 }
             }
-        }
-    }
-
-    private void GenerateMonster1()
-    {
-        for (int i = 0; i < numberOfClones; i++)
-        {
-            float x = Random.Range(8, 23);
-            float y = Random.Range(8, 23);
-
-            Vector2 position = new Vector2((int)x, (int)y); 
-            GameObject clone = Instantiate(monster1, position, Quaternion.identity);
         }
     }
 

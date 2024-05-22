@@ -7,22 +7,18 @@ public class Monster1Initial : MonoBehaviour
     public int numberOfClones = 5;
 
     void Awake(){
-        Game = GetComponent<Game>();
+        Game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
     }
 
-    void GenerateMonster1()
+    public void GenerateMonster1()
     {
         for (int i = 0; i < numberOfClones; i++)
         {
-            float x = (int)Random.Range(0, Game.width);
-            float y = (int)Random.Range(0, Game.height);
+            float x = Random.Range(8, 23);
+            float y = Random.Range(8, 23);
 
-
-
-            Vector2 position = new Vector2(x, y); 
+            Vector2 position = new Vector2((int)x, (int)y); 
             GameObject clone = Instantiate(monster1, position, Quaternion.identity);
-
-            
         }
     }
 }
