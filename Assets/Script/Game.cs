@@ -15,6 +15,7 @@ public class Game : MonoBehaviour
 
     private Board board;
     private Cell[,] state;
+    private WalkerGeneration walkerGeneration;
     public PlayerState playerState;
     public GameObject player;
     public MainMenu mainMenu;
@@ -29,6 +30,7 @@ public class Game : MonoBehaviour
         board = GetComponentInChildren<Board>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
+        walkerGeneration = GetComponent<WalkerGeneration>();
     }
 
     private void Start(){
@@ -39,7 +41,8 @@ public class Game : MonoBehaviour
         state = new Cell[width, height];
         
         GenerateCells();
-        GenerateDungeon();
+        walkerGeneration.Generate(state);
+        //GenerateDungeon();
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
