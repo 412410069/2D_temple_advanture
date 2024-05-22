@@ -13,10 +13,10 @@ public class Game : MonoBehaviour
     public int width = 32;
     public int height = 32;
     public int mineNum = 80;
-    
 
     private Board board;
     public Cell[,] state;
+    private WalkerGeneration walkerGeneration;
     public PlayerState playerState;
     public MonsterInitial monster1;
     public GameObject player;
@@ -30,6 +30,7 @@ public class Game : MonoBehaviour
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
+        walkerGeneration = GetComponent<WalkerGeneration>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
         monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
