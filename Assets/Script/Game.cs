@@ -49,9 +49,9 @@ public class Game : MonoBehaviour
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
-        monster1.GenerateMonster1();
-
+        
         board.Draw(state);
+        monster1.GenerateMonster1();
     }
     private void GenerateCells(){
         for(int x = 0; x < width; x++){
