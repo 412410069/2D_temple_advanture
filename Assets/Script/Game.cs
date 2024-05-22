@@ -49,7 +49,6 @@ public class Game : MonoBehaviour
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
-        
         board.Draw(state);
         monster1.GenerateMonster1();
     }
