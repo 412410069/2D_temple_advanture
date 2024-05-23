@@ -4,7 +4,8 @@ using UnityEngine;
 public class MonsterInitial : MonoBehaviour
 {
     public Game game;
-    public GameObject monster1; 
+    public GameObject monster1;
+    public GameObject player; 
     public int numberOfClones = 5;
     private Vector2 position;
     private Vector2 position_prefab;
