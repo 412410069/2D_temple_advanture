@@ -14,7 +14,7 @@ public class MonsterInitial : MonoBehaviour
 
     public void GenerateMonster1()
     {
-        for (int i = 0; i < numberOfClones-1; i++)
+        for (int i = 0; i < numberOfClones-1;)
         {
             float x = Random.Range(0, game.width);
             float y = Random.Range(0, game.height);
@@ -22,6 +22,7 @@ public class MonsterInitial : MonoBehaviour
             if(game.state[(int)x, (int)y].type != Cell.Type.Void && game.state[(int)x, (int)y].type != Cell.Type.Wall){
                 position = new Vector2((int)x, (int)y); 
                 GameObject clone = Instantiate(monster1, position, Quaternion.identity);
+                ++i;
             }
         }
         
@@ -29,7 +30,7 @@ public class MonsterInitial : MonoBehaviour
             float x_prefab = Random.Range(0, game.width);
             float y_prefab = Random.Range(0, game.height);
 
-            if(game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Void && game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Wall){
+            if(game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Void || game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Wall){
                 position_prefab = new Vector2((int)x_prefab, (int)y_prefab);
                 monster1.transform.position=position_prefab;
                 break;

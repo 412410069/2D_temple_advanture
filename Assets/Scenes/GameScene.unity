@@ -1518,7 +1518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   monster1: {fileID: 1689902262}
-  numberOfClones: 50
+  numberOfClones: 5
 --- !u!4 &1811878604
 Transform:
   m_ObjectHideFlags: 0
