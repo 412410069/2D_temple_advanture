@@ -47,7 +47,7 @@ public class Game : MonoBehaviour
         state = new Cell[width, height];
         
         GenerateCells();
-        //walkerGeneration.Generate(state);
+        walkerGeneration.Generate(state);
         GenerateDungeon();
         GenerateMines();
         GeneratePlayer();

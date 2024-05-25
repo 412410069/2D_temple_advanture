@@ -10,7 +10,7 @@ public class Monster1Movement : MonoBehaviour
     public float moveInterval = 1.0f;
 
     public GameObject player;
-    public int trackDistance = 5;
+    public int trackDistance = 10;
 
     private float timer;
 
