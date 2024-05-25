@@ -3030,7 +3030,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageCooldown: {fileID: 493138918}
   textCooldown: {fileID: 1499129844}
-  imageEdge: {fileID: 0}
 --- !u!1 &1584346904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3195,7 +3194,7 @@ GameObject:
   - component: {fileID: 1689902265}
   m_Layer: 0
   m_Name: monster1
-  m_TagString: Untagged
+  m_TagString: monster1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
