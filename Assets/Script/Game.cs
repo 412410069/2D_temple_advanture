@@ -26,7 +26,10 @@ public class Game : MonoBehaviour
     public float shieldOpenTime;
     public float defultShieldOpenTime = 3;
     public float shieldTimer;
-    public float secondRate = 1; 
+    public float secondRate = 1;
+    public float searchMineTimer;
+    public float searchMineTime;
+    public float defultSearchMineTime = 30; 
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
@@ -44,8 +47,8 @@ public class Game : MonoBehaviour
         state = new Cell[width, height];
         
         GenerateCells();
-        walkerGeneration.Generate(state);
-        //GenerateDungeon();
+        //walkerGeneration.Generate(state);
+        GenerateDungeon();
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
@@ -154,7 +157,7 @@ public class Game : MonoBehaviour
         PlayerMeetMine();
         // PlayerMeetMonster();
         itemShield();
-        searchMine();
+        isValidSearchMine();
     }
 
     private void Reavel(){
@@ -228,24 +231,35 @@ public class Game : MonoBehaviour
         shieldOpenTime = -1;
     }
 
+    private void isValidSearchMine(){
+        if (searchMineTimer < secondRate){
+            searchMineTimer += Time.deltaTime;
+        }
+        else{
+            if (searchMineTime > 0){
+                searchMineTime -=1;
+                searchMineTimer = 0;
+            }
+        }
+        if (!playerState.gameOver && searchMineTime <= 0){
+            searchMine();
+        }
+    }
+
     private void searchMine(){
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         Cell cell = GetCell(cellPosition.x,cellPosition.y); 
         if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
-            if (cell.type == Cell.Type.Empty){
-                Flood(cell);
-            }
-            else if (cell.revealed){
+            if (cell.revealed){
                 return;
             }
             cell.revealed = true;
             state[cellPosition.x,cellPosition.y] = cell;
             board.Draw(state);    
-            
+            searchMineTime = defultSearchMineTime;
         }
     }
-
 
     private Cell GetCell(int x, int y){
         if (IsVaild(x,y)){
