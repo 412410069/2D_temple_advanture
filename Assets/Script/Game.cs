@@ -23,6 +23,7 @@ public class Game : MonoBehaviour
     public MainMenu mainMenu;
     public GameObject exitScene;
     public GameObject shield;
+    public GlowGrid glowGrid;
     public float shieldOpenTime;
     public float defultShieldOpenTime = 3;
     public float shieldTimer;
@@ -30,6 +31,7 @@ public class Game : MonoBehaviour
     public float searchMineTimer;
     public float searchMineTime;
     public float defultSearchMineTime = 30; 
+    public float glowsecond = 0;
 
     private void Awake(){
         board = GetComponentInChildren<Board>();
@@ -37,6 +39,7 @@ public class Game : MonoBehaviour
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
         monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
+        glowGrid = GetComponentInChildren<GlowGrid>();
     }
 
     private void Start(){
@@ -153,11 +156,13 @@ public class Game : MonoBehaviour
 
     void Update()
     {
+        eraseGlow();
         Reavel();
         PlayerMeetMine();
         // PlayerMeetMonster();
         itemShield();
         isValidSearchMine();
+        glow();
     }
 
     private void Reavel(){
@@ -292,7 +297,17 @@ public class Game : MonoBehaviour
             Flood(state[cell.position.x + 1, cell.position.y - 1]);
         }
     }
-
+    public void glow(){
+        Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
+        Cell cell = GetCell(cellPosition.x,cellPosition.y); 
+        state[cellPosition.x,cellPosition.y] = cell;
+        glowGrid.setCellPosition(cellPosition);
+        glowGrid.glowGrid();
+    }
+    public void eraseGlow(){
+        glowGrid.eraseGlowGrid();
+    }
     public void backToMainMenu(){
         SceneManager.LoadSceneAsync(0);
     }
