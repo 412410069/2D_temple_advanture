@@ -11,13 +11,13 @@ public class SpellCooldown : MonoBehaviour
     [SerializeField]
     private Image imageCooldown;
     [SerializeField]
-    private TMP_Text textCooldown;
+    private Text textCooldown;
     [SerializeField]
     private Image imageEdge;
 
     //variable for looking after the cooldown
     private bool isCoolDown = false;
-    private float cooldownTime = 10.0f;
+    private float cooldownTime = 30.0f;
     private float cooldownTimer = 0.0f;
     // Start is called before the first frame update
     void Start()
