@@ -17,4 +17,5 @@ public class PlayerState : MonoBehaviour
     public bool meetMonster;
     public bool isShieldOpen;
     public bool gameOver;
+    public bool isValidMonsterMovement;
 }
