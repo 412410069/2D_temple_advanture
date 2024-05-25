@@ -3140,7 +3140,7 @@ MonoBehaviour:
   game: {fileID: 0}
   moveDistance: 1
   moveInterval: 1
-  player: {fileID: 0}
+  player: {fileID: 1751122387}
   trackDistance: 5
 --- !u!1 &1708520155
 GameObject:
