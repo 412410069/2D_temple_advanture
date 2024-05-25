@@ -51,7 +51,7 @@ public class Game : MonoBehaviour
         
         GenerateCells();
         walkerGeneration.Generate(state);
-        GenerateDungeon();
+        // GenerateDungeon();
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
@@ -301,7 +301,6 @@ public class Game : MonoBehaviour
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         Cell cell = GetCell(cellPosition.x,cellPosition.y); 
-        state[cellPosition.x,cellPosition.y] = cell;
         glowGrid.setCellPosition(cellPosition);
         glowGrid.glowGrid();
     }

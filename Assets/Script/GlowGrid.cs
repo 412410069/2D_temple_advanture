@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class GlowGrid : MonoBehaviour
 {
+    private int width = 32;
+    private int height = 32;
     private int cellPositionX;
     private int cellPositionY;
     public Tilemap Tilemap {get; private set;}
@@ -18,8 +20,10 @@ public class GlowGrid : MonoBehaviour
     }
 
     public void setCellPosition(Vector3Int cellPosition){
-        cellPositionX = cellPosition.x;
-        cellPositionY = cellPosition.y;
+        if(cellPosition.x < width && cellPosition.y < height){
+            cellPositionX = cellPosition.x;
+            cellPositionY = cellPosition.y;
+        }
     }
     public void glowGrid(){
         Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid);
