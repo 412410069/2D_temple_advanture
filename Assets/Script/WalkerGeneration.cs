@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -27,7 +28,9 @@ public class WalkerGeneration : MonoBehaviour
 
         tileCount++;
 
-        StartCoroutine(CreateEmptys(dungeon));
+        //StartCoroutine();
+        CreateEmptys(dungeon);
+        CreateWalls(dungeon);
     }
     
     private Vector3Int GetDirection(){
@@ -47,9 +50,9 @@ public class WalkerGeneration : MonoBehaviour
         }
     }
 
-    private IEnumerator CreateEmptys(Cell[,] dungeon){
+    private void CreateEmptys(Cell[,] dungeon){
         while((float)tileCount / (float)dungeon.Length < fillPercentage){
-            bool hasCreatedEmpty = false;
+            //bool hasCreatedEmpty = false;
             foreach(WalkerObject curWalker in walkers){
                 Vector3Int curPos = curWalker.position;
 
@@ -57,7 +60,7 @@ public class WalkerGeneration : MonoBehaviour
                     dungeon[curPos.x, curPos.y].type = Cell.Type.Empty;
                     dungeon[curPos.x, curPos.y].revealed = false;
                     tileCount++;
-                    hasCreatedEmpty = true;
+                    //hasCreatedEmpty = true;
                 }
             }
 
@@ -66,9 +69,9 @@ public class WalkerGeneration : MonoBehaviour
             ChanceToCreate();
             UpdatePosition(dungeon);
 
-            if(hasCreatedEmpty){
-                yield return new WaitForSeconds(waitTime);
-            }
+            // if(hasCreatedEmpty){
+            //     yield return new WaitForSeconds(waitTime);
+            // }
         }
     }
 
@@ -111,6 +114,31 @@ public class WalkerGeneration : MonoBehaviour
             foundWalker.position += foundWalker.direction;
             foundWalker.position.x = Mathf.Clamp(foundWalker.position.x, 1, dungeon.GetLength(0) - 2);
             foundWalker.position.y = Mathf.Clamp(foundWalker.position.y, 1, dungeon.GetLength(0) - 2);
+            walkers[i] = foundWalker;
         }
     }
+
+    private void CreateWalls(Cell[,] dungeon){
+        for(int x = 0; x < dungeon.GetLength(0) - 1; x++){
+            for(int y = 0; y < dungeon.GetLength(1) - 1; y++){
+                if(dungeon[x, y].type == Cell.Type.Empty){
+                    SetWall(dungeon[x + 1, y]);
+                    SetWall(dungeon[x + 1, y + 1]);
+                    SetWall(dungeon[x, y + 1]);
+                    SetWall(dungeon[x - 1, y + 1]);
+                    SetWall(dungeon[x- 1, y]);
+                    SetWall(dungeon[x - 1, y - 1]);
+                    SetWall(dungeon[x, y - 1]);
+                    SetWall(dungeon[x + 1, y - 1]);
+                }
+            }
+        }
+    }
+
+    private void SetWall(Cell cell){
+        if(cell.type == Cell.Type.Void){
+            cell.type = Cell.Type.Wall;
+        }
+    }
+
 }

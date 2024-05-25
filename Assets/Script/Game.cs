@@ -12,7 +12,7 @@ public class Game : MonoBehaviour
 {
     public int width = 32;
     public int height = 32;
-    public int mineNum = 80;
+    public int mineNum = 150;
 
     private Board board;
     public Cell[,] state;
@@ -245,7 +245,6 @@ public class Game : MonoBehaviour
             
         }
     }
-
 
     private Cell GetCell(int x, int y){
         if (IsVaild(x,y)){
