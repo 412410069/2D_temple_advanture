@@ -15,15 +15,21 @@ public class MonsterInitial : MonoBehaviour
 
     public void GenerateMonster1()
     {
+        Vector2 player_position = player.transform.position;
+        float player_x = player_position.x;
+        float player_y = player_position.y;
+
         for (int i = 0; i < numberOfClones-1;)
         {
             float x = Random.Range(0, game.width);
             float y = Random.Range(0, game.height);
 
             if(game.state[(int)x, (int)y].type != Cell.Type.Void && game.state[(int)x, (int)y].type != Cell.Type.Wall){
-                position = new Vector2((int)x, (int)y); 
-                GameObject clone = Instantiate(monster1, position, Quaternion.identity);
-                ++i;
+                if(Mathf.Abs(player_x - (int)x) + Mathf.Abs(player_y - (int)y) >= 10){
+                    position = new Vector2((int)x, (int)y); 
+                    GameObject clone = Instantiate(monster1, position, Quaternion.identity);
+                    ++i;
+                }
             }
         }
         
@@ -32,9 +38,11 @@ public class MonsterInitial : MonoBehaviour
             float y_prefab = Random.Range(0, game.height);
 
             if(game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Void && game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Wall){
-                position_prefab = new Vector2((int)x_prefab, (int)y_prefab);
-                monster1.transform.position=position_prefab;
-                break;
+                if(Mathf.Abs(player_x - (int)x_prefab) + Mathf.Abs(player_y - (int)y_prefab) >= 10){
+                    position_prefab = new Vector2((int)x_prefab, (int)y_prefab);
+                    monster1.transform.position=position_prefab;
+                    break;
+                }
             }
         }
     }

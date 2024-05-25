@@ -30,7 +30,9 @@ public class Monster1Movement : MonoBehaviour
         int x = (int)transform.position.x;
         int y = (int)transform.position.y;
 
-        int direction = Random.Range(0, 4);
+        int direction;
+
+        direction = Random.Range(0, 4);
 
         Vector3 moveDirection = Vector3.zero;
         switch (direction)
