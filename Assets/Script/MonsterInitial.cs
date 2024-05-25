@@ -31,7 +31,7 @@ public class MonsterInitial : MonoBehaviour
             float x_prefab = Random.Range(0, game.width);
             float y_prefab = Random.Range(0, game.height);
 
-            if(game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Void || game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Wall){
+            if(game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Void && game.state[(int)x_prefab, (int)y_prefab].type != Cell.Type.Wall){
                 position_prefab = new Vector2((int)x_prefab, (int)y_prefab);
                 monster1.transform.position=position_prefab;
                 break;
