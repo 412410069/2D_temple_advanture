@@ -191,21 +191,10 @@ public class Game : MonoBehaviour
             }
         }
     }
-    // private void PlayerMeetMonster(){           //我還不知道怪物到底是怎麼寫出來
-    //     int x = playerState.position.x;
-    //     int y = playerState.position.y;
-    //     if(!playerState.gameOver && !playerState.isMoving){
-    //         if(state[x, y].type == Cell.Type.Monster){
-    //             Debug.Log("meet Monster!");
-    //             playerState.meetMonster = true;
-    //             playerState.gameOver = true;
-    //             gameOver();             //還沒辦法找到ExitScene
-    //         }
-    //     }
-    // }
+    
 
     private void itemShield(){
-        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Keypad1) == true){
+        if(!playerState.gameOver && (Input.GetKeyDown(KeyCode.Keypad1) == true || Input.GetKeyDown(KeyCode.Alpha1) == true)){
             openShield();
         }
 
