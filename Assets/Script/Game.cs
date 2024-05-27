@@ -286,6 +286,13 @@ public class Game : MonoBehaviour
             Flood(state[cell.position.x + 1, cell.position.y - 1]);
         }
     }
+
+    private void forceMonster(){
+        Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
+        
+    }
+
     public void glow(){
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);

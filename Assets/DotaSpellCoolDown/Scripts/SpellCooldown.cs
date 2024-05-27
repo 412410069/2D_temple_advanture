@@ -17,7 +17,13 @@ public class SpellCooldown : MonoBehaviour
     private bool isCoolDown = false;
     private float cooldownTime = 30.0f;
     private float cooldownTimer = 0.0f;
+    public PlayerState playerState;
     // Start is called before the first frame update
+
+    private void Awake(){
+        playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
+    }
+
     void Start()
     {
         textCooldown.gameObject.SetActive(false);
@@ -27,7 +33,7 @@ public class SpellCooldown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Q))
         {
             UseSpell();
         }
