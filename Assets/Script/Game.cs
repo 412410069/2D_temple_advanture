@@ -40,6 +40,7 @@ public class Game : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
         glowGrid = GetComponentInChildren<GlowGrid>();
+        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;       //有可能這行會出錯，如果更改道索引值０
     }
 
     private void Start(){
