@@ -1,0 +1,2547 @@
+fileFormatVersion: 2
+guid: 9d2261e2ce234b94a84b71938728e1a7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31e69f73435b0b4d878debed8f0fcca
+      internalID: -1428484066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 800
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e52c63f7a76b34d8fd70322125bcc0
+      internalID: 1007634597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 784
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45312afec764b2d4e91cd44660f18aaa
+      internalID: -293794936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 800
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5cffab1c6dddc4ab4f4f338df6f34b
+      internalID: 1711657124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 784
+        width: 175
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690c87ec0334341489dead4a1031326b
+      internalID: -425572617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 816
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fce280271f6db64ab5a4ce0b71092d4
+      internalID: -723481589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 816
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e061203f277273e4d8a4d98eeb0a5127
+      internalID: -1613512677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 816
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8259ce3166c0a14f82c69aa77d73902
+      internalID: -1026679246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_8
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 816
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d8dfd3f938d49428c6effc1fc6d292
+      internalID: -378103538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_9
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 816
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc12ce2de173bcd4286f74193af0ec3d
+      internalID: -218808528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_10
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 825
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f09e6b825951d4c9e00cb86be12ed8
+      internalID: -385336557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_11
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 818
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e72b1adfa302b4cb12eeb6050f6248
+      internalID: 21918449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_12
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 824
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a4d2cb08f33b340b946cec91389d13
+      internalID: 1259421560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_13
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 824
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bb5fada72b6d1489de38d596665ba5
+      internalID: 176362792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_14
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 819
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7d65d9d4067f242a8932b59f0ff937
+      internalID: -1487765797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_15
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 817
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148935e30adbce74295d30b7a7e7c45c
+      internalID: 561932581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_16
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 801
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d3e31ed056e2e478a82a36882bb9ce
+      internalID: -345985868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_17
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 816
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c8fea9359153d4589f1cbc3427b49d
+      internalID: -1166652960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_18
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 816
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e504d557ddf70f34cb9cb12f30b84dff
+      internalID: -311763836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_19
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 817
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52c84c6e88caf049babe74c0a41e571
+      internalID: 1602111338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_20
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 619
+        width: 288
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ef9cc3c8a3f124588c6fc1a537901e
+      internalID: 59409174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_21
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 817
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec711e48f07182e46aff8c32fb0ababc
+      internalID: 888263448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_22
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 820
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06eac4a68b310034e9f0710f4a1f556c
+      internalID: 16707338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_23
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 817
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f77ae293e628cc4bbbe07af451aaf2d
+      internalID: 1674830989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_24
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 800
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b112932c864a49f42af6d52a2a916824
+      internalID: -1228718729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_25
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 807
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0071828548ed5dd42a70eecc9b47504b
+      internalID: -970891097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_26
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 807
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b309194cc7e21e43afa441315aa7764
+      internalID: 458770711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 807
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c98a140d77163c44b4d53adccee581c
+      internalID: -1915912034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_28
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 807
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ba62443045f5042a9cdd6229701df1
+      internalID: -1131802171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_29
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 807
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7526ae3471ec9624d9ca34ecad63fe41
+      internalID: 1218591559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_30
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 809
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c1584e824f1814f9789a5114001b52
+      internalID: -62825131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_31
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 802
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f60656ae8aca240a18b8a00a227aa3
+      internalID: -1658432207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_32
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 808
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d2764081ccd5b41a1060873052e3f6
+      internalID: -1730367194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_33
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 808
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d18c4168fd4e5346a7ce98786dae225
+      internalID: -1236359488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_34
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 803
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39365f8fed0259418dd0d5e7ec08129
+      internalID: 549570862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_35
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 801
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aef48adfc155e4096a8b8113ffefa0
+      internalID: -2072492080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_36
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 801
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bb8bd214492224ea4094aea8a3313b
+      internalID: 1413458193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_37
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 784
+        width: 64
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd15fd27c2eed91418c8346e53b1ab3b
+      internalID: 65680184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_38
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 801
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23084411c40355c47bdb7cf7aacaf317
+      internalID: -66865329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 784
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b25f819e14be34098946c074eddac2
+      internalID: -832208816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_40
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729b7758bfded8942987d77462fb686c
+      internalID: -276163892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_41
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ce3d4f5ace8944895bcdc9416c33bd
+      internalID: -1256062713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_42
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5339e58bdf5d30242a7c732a3dc83d38
+      internalID: -1342922699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_43
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b1017b368aac9459f679720bfcc850
+      internalID: 932157277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_44
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 801
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6cd58b29a2a21408a56105518a8342
+      internalID: -1518366463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_45
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 801
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1aef00ce20453940961622e16d91946
+      internalID: 1871508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_46
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 804
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b12ba31908061b43bf4070cd1481951
+      internalID: 1636199880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_47
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 801
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4112851ff781154c99528b6a5faa131
+      internalID: 1639061706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 784
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d08426df05aba440bd5780a8cd9f314
+      internalID: 1533559130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 784
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c041be14a3dde864088dd5b16599bfa4
+      internalID: 197148736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_50
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 784
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aa0557ba9f30d43b45d03f07c43fde
+      internalID: 1584989255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_51
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 784
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d03d2eee1257f94d8c07ba0e8b228d2
+      internalID: -1009726292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_52
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 784
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f53c61187161e4cb5a8763843349b6
+      internalID: -1197757928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_53
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 784
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bcdaf52dbe0da4cad9ed3e4d3dd46e
+      internalID: 873902348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_54
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 784
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e17cc0126afe0d45943275591b76cf7
+      internalID: 238350943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_55
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 784
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e57efaea4f948340a0ca857bdd3cd9e
+      internalID: -618083211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_56
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 785
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2485e36ae6fdb064a967f4d0bb40cce0
+      internalID: -509703267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 192
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f32cc091e411cf44b1094d50b4301b6
+      internalID: -1589590547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_58
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 736
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172899b17d31f8f409136a0d39d51df7
+      internalID: -97401767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_59
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 736
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee98ea7ec710ad44b98af96897b823f
+      internalID: -406000363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_60
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 736
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a8c41a1b033eb42abc0c3073a12d74
+      internalID: 270291656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_61
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 736
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd4eb04e71373448b9c633775a7aa80
+      internalID: 1176945983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_62
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 736
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8105f772a6f2bb744aafdc06d0f7c23b
+      internalID: -1453525957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_63
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 736
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c58fe7a08d2df4a9a4454e2d19cc62
+      internalID: -642204734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_64
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 720
+        width: 96
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ac3c403401af24097c7e7307a782e1
+      internalID: 630746835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_65
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 736
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69974cea04144d4c9309e56a147f5d6
+      internalID: -1317856802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_66
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 736
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c6d675b7df5204c90899c797bb80c2
+      internalID: 1704889242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_67
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 736
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bed10e39b0015d4a943b04d2a58d108
+      internalID: -582180632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 880
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0f6e71fa7cc114c996fd9a37aa976b
+      internalID: -1768426115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_69
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 720
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db8f35ec74b3b44dbe10ff91f6be320
+      internalID: -623279556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_70
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 720
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8bc5308c650c444958f9eed099703c
+      internalID: -664537075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_71
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 672
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2c96849b1705c41b433d8828f0481d
+      internalID: 932379780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_72
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 688
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387fc297574ad8a4dbcca9f89b99e062
+      internalID: -1647398254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_73
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 336
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad351793f2ffda40bb9fd52ab55b2f4
+      internalID: 484842745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_74
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 336
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620f2a3dc8fdd0f468d7abf8ee4a8f5e
+      internalID: 2082231714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_75
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 336
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58dc2d71cc0b1b34eb871ff347ba0209
+      internalID: 487303135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_76
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 336
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68d7a5a2ce98944b995fd8b43daa58b
+      internalID: -905143010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_77
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 336
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012e4cfd9aa85f846b342f5f49b1549a
+      internalID: -1040312605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_78
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 336
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af2e22a78913a143b9891e1e7451a06
+      internalID: 1491631011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_79
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 336
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8ea01423549bb419554eeb7bf4b96f
+      internalID: -1164626044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_80
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 336
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57b47379591a134b91cb50789333925
+      internalID: 1559202569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_81
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 336
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb55c43ae7c2e014684d97ee982329db
+      internalID: 19139029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_82
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 397
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a3d85943c409c4db89bdd8e0deac46
+      internalID: -178564747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_83
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 320
+        width: 122
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb088d2a9bd9494e971248b69a7e0f1
+      internalID: 174766451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_84
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 320
+        width: 61
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e45fb1376029f448becbc297871b584
+      internalID: 1554051715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_85
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 304
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92adeda272a24f40980dcfa674a8c57
+      internalID: -461814040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_86
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 304
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3ca50ff249a4048ba17012bc28ada2
+      internalID: 1971238836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_87
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 304
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cce90164649de428e0ae67fe221ce5
+      internalID: 780712804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_88
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 304
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba64b5b202de67042baad6ce96d86b81
+      internalID: 147714516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_89
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 304
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dadb72137aca64f9969a90e98381f7
+      internalID: -2043603607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_90
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 304
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89addb3d18c15c946b3bc493bc8eb66f
+      internalID: 505032188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 304
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c907303bd535b374b8ea80839bb2249e
+      internalID: -2004554553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_92
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 304
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e8e622dd9851a43ba5f2d235df8fdd
+      internalID: -370176990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_93
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc05c1a9c15dd2e4fb26427b097c3462
+      internalID: -731714184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_94
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb17e367be196e4a8601c14e7c40af4
+      internalID: -1902964368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_95
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 304
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705b82accd6fcc24c850c161ce3a4938
+      internalID: -1873926393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_96
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 208
+        width: 160
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3851718313385a04e8e90ef3058a3beb
+      internalID: -1833998848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29ac715f259dc34c8bbf5740a1f273f
+      internalID: 1075766320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_98
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 288
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b4853fb6bddc74ea156b151a51b391
+      internalID: -255533741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_99
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 288
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28397228e5550c84dbec1492fd089bbd
+      internalID: -92854294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_100
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 257
+        width: 79
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811db53ae4aa5264eae94e15c6881ac3
+      internalID: -219917188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_101
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 272
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98430830e4b080440b2ed7e7a3dbb76d
+      internalID: -45814727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_102
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 210
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b7b2d863c01b744b3f74647c5be1de
+      internalID: 615023757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_103
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 208
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aacbe7b9cca0bb48a09391ad1245494
+      internalID: 223754428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_104
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 211
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdf43bd33262b64996171df5a2de041
+      internalID: 932222201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_105
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 208
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4259fb5a086b14d458bdbbb958d9e6ef
+      internalID: 1500405704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_106
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 160
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abe6c23893dc8747a61b86bc9df1081
+      internalID: 1255886652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_107
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 162
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6da67b6da7aee6489de5dde5e882037
+      internalID: 364442675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_108
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 112
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e5bac99a134fe499d38383f57c7d9e
+      internalID: 529948479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flurmimons_tileset___nature_by_flurmimon_d9leui9_109
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 115
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39d8ecd148f9824f81957387bb4c35c
+      internalID: 2054284854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_0: -1428484066
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_1: 1007634597
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_10: -385336557
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_100: -219917188
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_101: -45814727
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_102: 615023757
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_103: 223754428
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_104: 932222201
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_105: 1500405704
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_106: 1255886652
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_107: 364442675
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_108: 529948479
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_109: 2054284854
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_11: 21918449
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_12: 1259421560
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_13: 176362792
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_14: -1487765797
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_15: 561932581
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_16: -345985868
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_17: -1166652960
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_18: -311763836
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_19: 1602111338
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_2: -293794936
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_20: 59409174
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_21: 888263448
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_22: 16707338
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_23: 1674830989
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_24: -1228718729
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_25: -970891097
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_26: 458770711
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_27: -1915912034
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_28: -1131802171
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_29: 1218591559
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_3: 1711657124
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_30: -62825131
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_31: -1658432207
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_32: -1730367194
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_33: -1236359488
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_34: 549570862
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_35: -2072492080
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_36: 1413458193
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_37: 65680184
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_38: -66865329
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_39: -832208816
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_4: -425572617
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_40: -276163892
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_41: -1256062713
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_42: -1342922699
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_43: 932157277
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_44: -1518366463
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_45: 1871508
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_46: 1636199880
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_47: 1639061706
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_48: 1533559130
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_49: 197148736
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_5: -723481589
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_50: 1584989255
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_51: -1009726292
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_52: -1197757928
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_53: 873902348
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_54: 238350943
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_55: -618083211
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_56: -509703267
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_57: -1589590547
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_58: -97401767
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_59: -406000363
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_6: -1613512677
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_60: 270291656
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_61: 1176945983
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_62: -1453525957
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_63: -642204734
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_64: 630746835
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_65: -1317856802
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_66: 1704889242
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_67: -582180632
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_68: -1768426115
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_69: -623279556
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_7: -1026679246
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_70: -664537075
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_71: 932379780
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_72: -1647398254
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_73: 484842745
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_74: 2082231714
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_75: 487303135
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_76: -905143010
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_77: -1040312605
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_78: 1491631011
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_79: -1164626044
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_8: -378103538
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_80: 1559202569
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_81: 19139029
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_82: -178564747
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_83: 174766451
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_84: 1554051715
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_85: -461814040
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_86: 1971238836
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_87: 780712804
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_88: 147714516
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_89: -2043603607
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_9: -218808528
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_90: 505032188
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_91: -2004554553
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_92: -370176990
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_93: -731714184
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_94: -1902964368
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_95: -1873926393
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_96: -1833998848
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_97: 1075766320
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_98: -255533741
+      flurmimons_tileset___nature_by_flurmimon_d9leui9_99: -92854294
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
