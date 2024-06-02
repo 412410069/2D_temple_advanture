@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -21,6 +22,7 @@ public class Board : MonoBehaviour
     public Tile tileNum8;
     public Tile tileWall;
     public Tile tileVoid;
+    public Tile tileExit;
     
     private void Awake(){
         Tilemap = GetComponent<Tilemap>();
@@ -58,6 +60,7 @@ public class Board : MonoBehaviour
             case Cell.Type.Number: return GetNumberTile(cell);
             case Cell.Type.Wall: return tileWall;
             case Cell.Type.Void: return tileVoid;
+            case Cell.Type.Exit: return tileExit;
             default: return null;
         }
     }

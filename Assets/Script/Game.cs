@@ -52,7 +52,6 @@ public class Game : MonoBehaviour
         
         GenerateCells();
         walkerGeneration.Generate(state);
-        // GenerateDungeon();
         GenerateMines();
         GeneratePlayer();
         GenerateNumbers();
@@ -70,20 +69,6 @@ public class Game : MonoBehaviour
                 state[x, y] = cell;
             }
         }
-    }
-
-    private void GenerateDungeon(){
-        for(int x = width / 4 - 1; x < width / 4 * 3 + 1; x++){
-            for(int y = height / 4 - 1; y < height / 4 * 3 + 1; y++){
-                state[x ,y].type = Cell.Type.Wall;
-            }
-        }
-        for(int x = width / 4; x < width / 4 * 3; x++){
-            for(int y = height / 4; y < height / 4 * 3; y++){
-                state[x ,y].type = Cell.Type.Empty;
-                state[x ,y].revealed = false;
-            }
-        }    
     }
 
     private void GeneratePlayer(){

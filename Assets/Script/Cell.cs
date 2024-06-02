@@ -7,8 +7,8 @@ public class Cell
         Mine,
         Number,
         Wall,
-        //Monster,
-        Void
+        Void,
+        Exit
     }
 
     public Vector3Int position;
