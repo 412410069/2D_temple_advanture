@@ -1,17 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Monster1Movement : MonoBehaviour
 {
     public Game game;
-    public PlayerState playerState;
-    public Board board;
 
-    public float moveDistance = 1.0f;
-    public float moveInterval = 1.0f;
+    private float moveDistance = 1.0f;
+    private float moveInterval = 1.0f;
 
     public GameObject player;
     public int trackDistance = 10;
@@ -23,8 +19,6 @@ public class Monster1Movement : MonoBehaviour
     private float player_x;
     private float player_y;
 
-    private bool beingHeld = false;
-
     private int x;
     private int y;
 
@@ -32,29 +26,18 @@ public class Monster1Movement : MonoBehaviour
 
     void Awake(){
         game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
-        playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
-        board = GameObject.FindGameObjectWithTag("grid").GetComponentInChildren<Board>();
     }
     
     private void Update(){
         timer += Time.deltaTime;
 
-        if(playerState.isValidMonsterMovement){
-            IsBeingHeld();
+        if (timer >= moveInterval)
+        {
+            MonsterMove();
+            timer = 0f;
         }
-        
-        if(beingHeld){
-            HoldMove();
-        }
-        else {
-            if (timer >= moveInterval)
-            {
-                MonsterMove();
-                timer = 0f;
-            }
-        }
-        MonsterDie();
     }
+
     private void MonsterMove(){
         player_position = player.transform.position;
         moveDirection = Vector3.zero;
@@ -67,16 +50,15 @@ public class Monster1Movement : MonoBehaviour
         if(Mathf.Abs(player_x - (int)x) + Mathf.Abs(player_y - (int)y) <= trackDistance){
             MonsterMoveTrack();
         }
+
         else{
             MonsterMoveRandom();
         }
-        
-        // Vector3 monsterPos = new Vector3(x, y, 0);
-        // transform.position = Vector3.MoveTowards(transform.position, monsterPos, moveDistance * Time.deltaTime);
+
         transform.position += moveDirection * moveDistance;
     }
 
-    public void MonsterMoveTrack(){
+    private void MonsterMoveTrack(){
         if(player_x != x && player_y != y)
         direction = Random.Range(0, 2);
 
@@ -125,7 +107,7 @@ public class Monster1Movement : MonoBehaviour
         }
     }
 
-    public void MonsterMoveRandom(){
+    private void MonsterMoveRandom(){
         direction = Random.Range(0, 4);
 
         switch (direction)
@@ -150,39 +132,6 @@ public class Monster1Movement : MonoBehaviour
                 if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) return;
                 moveDirection = Vector3.right;
                 break;
-        }
-    }
-
-    private void IsBeingHeld(){
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int GameMousePos = board.Tilemap.WorldToCell(mousePos);
-        Debug.Log(GameMousePos.x);
-        Debug.Log(GameMousePos.y);
-        
-        //this.gameObject.transform.localPosition = new Vector3(mousePos.x-startPosx,mousePos.y-startPosy,0);
-        if (GameMousePos == transform.position){
-                if (Input.GetMouseButtonDown(0)){
-                    beingHeld = true;
-                    Debug.Log("Hold");
-                }
-                if (Input.GetMouseButtonUp(0)){
-                    beingHeld = false;
-                    playerState.isValidMonsterMovement = false;
-                }
-            }
-    }
-
-    private void HoldMove(){
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int GameMousePos = board.Tilemap.WorldToCell(mousePos);
-        transform.position = GameMousePos;
-    }
-
-    private void MonsterDie(){
-        int monster_x = (int)transform.position.x;
-        int monster_y = (int)transform.position.y;
-        if (game.state[monster_x,monster_y].type == Cell.Type.Mine){
-            Destroy(gameObject);
         }
     }
 }

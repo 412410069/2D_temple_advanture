@@ -18,7 +18,7 @@ public class Game : MonoBehaviour
     public Cell[,] state;
     private WalkerGeneration walkerGeneration;
     public PlayerState playerState;
-    public MonsterInitial monster1;
+    public MonsterInitial monster;
     public GameObject player;
     public MainMenu mainMenu;
     public GameObject exitScene;
@@ -38,7 +38,7 @@ public class Game : MonoBehaviour
         walkerGeneration = GetComponent<WalkerGeneration>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
-        monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
+        monster = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
         glowGrid = GetComponentInChildren<GlowGrid>();
         shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;
     }
@@ -57,7 +57,8 @@ public class Game : MonoBehaviour
         GeneratePlayer();
         GenerateNumbers();
         board.Draw(state);
-        monster1.GenerateMonster1();
+        monster.GenerateMonster1();
+        monster.GenerateMonsterWithView();
     }
     
     private void GenerateCells(){
