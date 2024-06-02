@@ -58,7 +58,7 @@ public class Monster1Movement : MonoBehaviour
         transform.position += moveDirection * moveDistance;
     }
 
-    private void MonsterMoveTrack(){
+    public void MonsterMoveTrack(){
         if(player_x != x && player_y != y)
         direction = Random.Range(0, 2);
 
@@ -107,7 +107,7 @@ public class Monster1Movement : MonoBehaviour
         }
     }
 
-    private void MonsterMoveRandom(){
+    public void MonsterMoveRandom(){
         direction = Random.Range(0, 4);
 
         switch (direction)
