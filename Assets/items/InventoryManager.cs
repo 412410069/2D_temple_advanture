@@ -6,6 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public GameObject InventoryMenu;
     private bool menuActivated = false;
+    public ItemSlot[] itemSlot;
     // Start is called before the first frame update
     void Start()
     {
