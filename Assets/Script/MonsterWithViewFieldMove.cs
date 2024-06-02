@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Monster1Movement : MonoBehaviour
+public class MonsterWithViewFieldMove : MonoBehaviour
 {
     public Game game;
-    public PlayerState playerState;
-    public Board board;
-
-
+    public Monster1Movement Monster1Movement;
+    public Raycast raycast;
     private float moveDistance = 1.0f;
     private float moveInterval = 1.0f;
 
     public GameObject player;
-    public int trackDistance = 10;
 
     private float timer;
 
@@ -24,8 +19,6 @@ public class Monster1Movement : MonoBehaviour
     private float player_x;
     private float player_y;
 
-     private bool beingHeld = false;
-
     private int x;
     private int y;
 
@@ -33,28 +26,22 @@ public class Monster1Movement : MonoBehaviour
 
     void Awake(){
         game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
-        playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
-        board = GameObject.FindGameObjectWithTag("grid").GetComponentInChildren<Board>();
-    }
-    
-    private void Update(){
-        if(playerState.isValidMonsterMovement){
-            IsBeingHeld();
-        }
-        
-        if(beingHeld){
-            HoldMove();
-        }
-        else {
-            if (timer >= moveInterval){
-                MonsterMove();
-                timer = 0f;
-            }
-        }
-        MonsterDie();
+        Monster1Movement = GameObject.FindGameObjectWithTag("monster1").GetComponent<Monster1Movement>();
+        raycast = GameObject.FindGameObjectWithTag("monsterWithView").GetComponent<Raycast>();
     }
 
-    private void MonsterMove(){
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= moveInterval)
+        {
+            MonsterViewMove();
+            timer = 0f;
+        }
+    }
+
+    void MonsterViewMove(){
         player_position = player.transform.position;
         moveDirection = Vector3.zero;
 
@@ -62,8 +49,8 @@ public class Monster1Movement : MonoBehaviour
         player_y = player_position.y;
         x = (int)transform.position.x;
         y = (int)transform.position.y;
-        
-        if(Mathf.Abs(player_x - (int)x) + Mathf.Abs(player_y - (int)y) <= trackDistance){
+
+        if(raycast.IsPlayerInSight()){
             MonsterMoveTrack();
         }
 
@@ -148,39 +135,6 @@ public class Monster1Movement : MonoBehaviour
                 if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) return;
                 moveDirection = Vector3.right;
                 break;
-        }
-    }
-    private void IsBeingHeld(){
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int GameMousePos = board.Tilemap.WorldToCell(mousePos);
-        Debug.Log(GameMousePos.x);
-        Debug.Log(GameMousePos.y);
-        
-        //this.gameObject.transform.localPosition = new Vector3(mousePos.x-startPosx,mousePos.y-startPosy,0);
-        if (GameMousePos == transform.position){
-                if (Input.GetMouseButtonDown(0)){
-                    beingHeld = true;
-                    Debug.Log("Hold");
-                }
-                if (Input.GetMouseButtonUp(0)){
-                    beingHeld = false;
-                    playerState.isValidMonsterMovement = false;
-                }
-            }
-    }
-
-    private void HoldMove(){
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int GameMousePos = board.Tilemap.WorldToCell(mousePos);
-        transform.position = GameMousePos;
-    }
-
-    private void MonsterDie(){
-        int monster_x = (int)transform.position.x;
-        int monster_y = (int)transform.position.y;
-        if (game.state[monster_x,monster_y].revealed &&game.state[monster_x,monster_y].type == Cell.Type.Mine){
-            Destroy(gameObject);
-            game.state[monster_x,monster_y].type = Cell.Type.Exploded;
         }
     }
 }

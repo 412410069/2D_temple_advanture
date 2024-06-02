@@ -18,7 +18,7 @@ public class Game : MonoBehaviour
     public Cell[,] state;
     private WalkerGeneration walkerGeneration;
     public PlayerState playerState;
-    public MonsterInitial monster1;
+    public MonsterInitial monster;
     public GameObject player;
     public MainMenu mainMenu;
     public GameObject exitScene;
@@ -38,9 +38,9 @@ public class Game : MonoBehaviour
         walkerGeneration = GetComponent<WalkerGeneration>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         player = GameObject.FindGameObjectWithTag("Player");
-        monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
+        monster = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
         glowGrid = GetComponentInChildren<GlowGrid>();
-        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;       //有可能這行會出錯，如果更改道索引值０
+        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;
     }
 
     private void Start(){
@@ -56,7 +56,8 @@ public class Game : MonoBehaviour
         GeneratePlayer();
         GenerateNumbers();
         board.Draw(state);
-        monster1.GenerateMonster1();
+        monster.GenerateMonster1();
+        monster.GenerateMonsterWithView();
     }
     
     private void GenerateCells(){
@@ -148,6 +149,7 @@ public class Game : MonoBehaviour
         // PlayerMeetMonster();
         itemShield();
         isValidSearchMine();
+        forceMonster();
         glow();
     }
 
@@ -230,14 +232,16 @@ public class Game : MonoBehaviour
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         Cell cell = GetCell(cellPosition.x,cellPosition.y); 
-        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
+        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && !playerState.spellCooldown){
             if (cell.revealed){
+                playerState.spellCooldown = false;
                 return;
             }
             cell.revealed = true;
             state[cellPosition.x,cellPosition.y] = cell;
             board.Draw(state);    
             searchMineTime = defultSearchMineTime;
+            playerState.spellCooldown = true;
         }
     }
 
@@ -276,7 +280,10 @@ public class Game : MonoBehaviour
     private void forceMonster(){
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-        
+        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.E)){
+            playerState.isValidMonsterMovement = true;
+            Debug.Log("EEEEEE");
+        }
     }
 
     public void glow(){

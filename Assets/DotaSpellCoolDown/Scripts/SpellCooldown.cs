@@ -15,7 +15,7 @@ public class SpellCooldown : MonoBehaviour
 
     //variable for looking after the cooldown
     private bool isCoolDown = false;
-    private float cooldownTime = 30.0f;
+    private float cooldownTime = 10.0f;
     private float cooldownTimer = 0.0f;
     public PlayerState playerState;
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class SpellCooldown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Q))
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && playerState.spellCooldown)
         {
             UseSpell();
         }

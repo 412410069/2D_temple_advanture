@@ -8,7 +8,8 @@ public class Cell
         Number,
         Wall,
         Void,
-        Exit
+        Exit,
+        Exploded
     }
 
     public Vector3Int position;
