@@ -40,7 +40,7 @@ public class Game : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         monster1 = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
         glowGrid = GetComponentInChildren<GlowGrid>();
-        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;       //有可能這行會出錯，如果更改道索引值０
+        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;
     }
 
     private void Start(){
@@ -163,6 +163,7 @@ public class Game : MonoBehaviour
         // PlayerMeetMonster();
         itemShield();
         isValidSearchMine();
+        forceMonster();
         glow();
     }
 
@@ -291,7 +292,11 @@ public class Game : MonoBehaviour
     private void forceMonster(){
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-        
+    
+        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.E)){
+            playerState.isValidMonsterMovement = true;
+            Debug.Log("EEEEEE");
+        }
     }
 
     public void glow(){
