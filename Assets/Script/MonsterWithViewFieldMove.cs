@@ -54,9 +54,9 @@ public class MonsterWithViewFieldMove : MonoBehaviour
             MonsterMoveTrack();
         }
 
-        // else{
-        //     MonsterMoveRandom();
-        // }
+        else{
+            MonsterMoveRandom();
+        }
 
         transform.position += moveDirection * moveDistance;
     }
