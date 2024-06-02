@@ -8,9 +8,9 @@ TagManager:
   - grid
   - monster
   - monster1
-  - monster2
   - monster3
   - monster4
+  - monsterWithView
   layers:
   - Default
   - TransparentFX
