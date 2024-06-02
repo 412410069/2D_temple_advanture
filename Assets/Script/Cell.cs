@@ -7,6 +7,7 @@ public class Cell
         Mine,
         Number,
         Wall,
+        Exploded,
         //Monster,
         Void
     }

@@ -18,4 +18,5 @@ public class PlayerState : MonoBehaviour
     public bool isShieldOpen;
     public bool gameOver;
     public bool isValidMonsterMovement;
+    public bool spellCooldown;
 }

@@ -247,14 +247,16 @@ public class Game : MonoBehaviour
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         Cell cell = GetCell(cellPosition.x,cellPosition.y); 
-        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
+        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && !playerState.spellCooldown){
             if (cell.revealed){
+                playerState.spellCooldown = false;
                 return;
             }
             cell.revealed = true;
             state[cellPosition.x,cellPosition.y] = cell;
             board.Draw(state);    
             searchMineTime = defultSearchMineTime;
+            playerState.spellCooldown = true;
         }
     }
 
@@ -293,7 +295,6 @@ public class Game : MonoBehaviour
     private void forceMonster(){
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-    
         if (!playerState.gameOver && Input.GetKeyDown(KeyCode.E)){
             playerState.isValidMonsterMovement = true;
             Debug.Log("EEEEEE");
