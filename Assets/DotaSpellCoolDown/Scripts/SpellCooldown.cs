@@ -35,12 +35,12 @@ public class SpellCooldown : MonoBehaviour
     {   
         if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && playerState.spellCooldown){
             UseSpell();
-            playerState.spellCooldown = false;
-            Debug.Log(playerState.spellCooldown);
         }
 
         if(isCoolDown){
             ApplyCooldown();
+            playerState.spellCooldown = false;
+            Debug.Log(playerState.spellCooldown);
         }
         //playerState.spellCooldown = false;
     }

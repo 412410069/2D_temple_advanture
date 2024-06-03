@@ -223,16 +223,17 @@ public class Game : MonoBehaviour
                 searchMineTimer = 0;
             }
         }
-        if (!playerState.gameOver && searchMineTime <= 0){
+        if (!playerState.gameOver && searchMineTime <= 0 && !playerState.spellCooldown){
             searchMine();
         }
+        Debug.Log(searchMineTime);
     }
 
     private void searchMine(){
         Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         Cell cell = GetCell(cellPosition.x,cellPosition.y); 
-        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && !playerState.spellCooldown){
+        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
             if (cell.revealed){
                 playerState.spellCooldown = false;
                 return;

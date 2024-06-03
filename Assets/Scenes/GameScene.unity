@@ -563,7 +563,7 @@ MonoBehaviour:
   secondRate: 1
   searchMineTimer: 0
   searchMineTime: 0
-  defultSearchMineTime: 30
+  defultSearchMineTime: 10
   glowsecond: 0
 --- !u!114 &247440035
 MonoBehaviour:
