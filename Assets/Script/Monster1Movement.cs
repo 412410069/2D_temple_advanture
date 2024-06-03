@@ -46,6 +46,7 @@ public class Monster1Movement : MonoBehaviour
             HoldMove();
         }
         else {
+            timer += Time.deltaTime;
             if (timer >= moveInterval){
                 MonsterMove();
                 timer = 0f;
