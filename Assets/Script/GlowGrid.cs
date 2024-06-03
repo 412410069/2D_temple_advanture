@@ -13,6 +13,7 @@ public class GlowGrid : MonoBehaviour
     private Board board;
 
     public Tile Grid;
+    public Tile Grid_WhenMouseDown;
     
     private void Awake(){
         Tilemap = GetComponent<Tilemap>();
@@ -26,7 +27,12 @@ public class GlowGrid : MonoBehaviour
         }
     }
     public void glowGrid(){
-        Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid);
+        if(Input.GetMouseButton(0) == true){
+            Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid_WhenMouseDown);
+        }
+        else{
+            Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid);
+        }
     }
     public void eraseGlowGrid(){
         Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), null);
