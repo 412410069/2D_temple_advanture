@@ -486,6 +486,7 @@ MonoBehaviour:
   tileNum8: {fileID: 11400000, guid: a024f0ec3c7ea0c4f9e2688e4c77b60f, type: 2}
   tileWall: {fileID: 11400000, guid: 2edb705550d3d934db8b977cc697a584, type: 2}
   tileVoid: {fileID: 11400000, guid: 1f98f6970b7fce24a97d80bfb07728b6, type: 2}
+  tileExit: {fileID: 0}
 --- !u!1 &247440031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,7 +1682,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 0}
   Monster1Movement: {fileID: 0}
+  playerState: {fileID: 0}
   raycast: {fileID: 0}
+  board: {fileID: 0}
   player: {fileID: 1751122387}
 --- !u!212 &1078181798
 SpriteRenderer:
@@ -3076,8 +3079,8 @@ MonoBehaviour:
   monster1: {fileID: 1689902262}
   monsterWithView: {fileID: 1078181793}
   player: {fileID: 1751122387}
-  numberOfMonster1Clones: 1
-  numberOfMonsterWithViewClones: 5
+  numberOfMonster1Clones: 5
+  numberOfMonsterWithViewClones: 1
   initialSafeDistance: 10
 --- !u!4 &1811878604
 Transform:
