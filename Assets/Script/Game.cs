@@ -30,7 +30,7 @@ public class Game : MonoBehaviour
     public float secondRate = 1;
     public float searchMineTimer;
     public float searchMineTime;
-    public float defultSearchMineTime = 30; 
+    public float defultSearchMineTime = 10; 
     public float glowsecond = 0;
 
     private void Awake(){
@@ -242,6 +242,7 @@ public class Game : MonoBehaviour
             board.Draw(state);    
             searchMineTime = defultSearchMineTime;
             playerState.spellCooldown = true;
+            Debug.Log(playerState.spellCooldown);
         }
     }
 

@@ -32,16 +32,17 @@ public class SpellCooldown : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && playerState.spellCooldown)
-        {
+    {   
+        if(!playerState.gameOver && Input.GetKeyDown(KeyCode.Q) && playerState.spellCooldown){
             UseSpell();
+            playerState.spellCooldown = false;
+            Debug.Log(playerState.spellCooldown);
         }
 
-        if(isCoolDown)
-        {
+        if(isCoolDown){
             ApplyCooldown();
         }
+        //playerState.spellCooldown = false;
     }
 
     void ApplyCooldown()

@@ -6,11 +6,15 @@ public class MonsterWithViewFieldMove : MonoBehaviour
 {
     public Game game;
     public Monster1Movement Monster1Movement;
+    public PlayerState playerState;
     public Raycast raycast;
+    public Board board;
     private float moveDistance = 1.0f;
     private float moveInterval = 1.0f;
 
     public GameObject player;
+
+    private bool beingHeld = false;
 
     private float timer;
 
@@ -28,17 +32,29 @@ public class MonsterWithViewFieldMove : MonoBehaviour
         game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
         Monster1Movement = GameObject.FindGameObjectWithTag("monster1").GetComponent<Monster1Movement>();
         raycast = GameObject.FindGameObjectWithTag("monsterWithView").GetComponent<Raycast>();
+        playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
+        board = GameObject.FindGameObjectWithTag("grid").GetComponentInChildren<Board>();
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= moveInterval)
-        {
-            MonsterViewMove();
-            timer = 0f;
+        if(playerState.isValidMonsterMovement){
+            IsBeingHeld();
         }
+        
+        if(beingHeld){
+            HoldMove();
+        }
+        else{
+            timer += Time.deltaTime;
+
+            if (timer >= moveInterval)
+            {
+                MonsterViewMove();
+                timer = 0f;
+            }
+        }
+        MonsterDie();
     }
 
     void MonsterViewMove(){
@@ -135,6 +151,40 @@ public class MonsterWithViewFieldMove : MonoBehaviour
                 if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) return;
                 moveDirection = Vector3.right;
                 break;
+        }
+    }
+
+    private void IsBeingHeld(){
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int GameMousePos = board.Tilemap.WorldToCell(mousePos);
+        Debug.Log(GameMousePos.x);
+        Debug.Log(GameMousePos.y);
+        
+        //this.gameObject.transform.localPosition = new Vector3(mousePos.x-startPosx,mousePos.y-startPosy,0);
+        if (GameMousePos == transform.position){
+                if (Input.GetMouseButtonDown(0)){
+                    beingHeld = true;
+                    Debug.Log("Hold");
+                }
+                if (Input.GetMouseButtonUp(0)){
+                    beingHeld = false;
+                    playerState.isValidMonsterMovement = false;
+                }
+            }
+    }
+
+    private void HoldMove(){
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int GameMousePos = board.Tilemap.WorldToCell(mousePos);
+        transform.position = GameMousePos;
+    }
+
+    private void MonsterDie(){
+        int monster_x = (int)transform.position.x;
+        int monster_y = (int)transform.position.y;
+        if (game.state[monster_x,monster_y].revealed &&game.state[monster_x,monster_y].type == Cell.Type.Mine){
+            Destroy(gameObject);
+            game.state[monster_x,monster_y].type = Cell.Type.Exploded;
         }
     }
 }
