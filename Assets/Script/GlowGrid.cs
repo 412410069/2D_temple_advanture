@@ -5,19 +5,25 @@ using UnityEngine.Tilemaps;
 
 public class GlowGrid : MonoBehaviour
 {
-    private int width = 32;
-    private int height = 32;
+    private int width;
+    private int height;
     private int cellPositionX;
     private int cellPositionY;
     public Tilemap Tilemap {get; private set;}
     private Board board;
+    private Game game;
 
-    public Tile Grid;
+    public Tile Grid_whenMouseOver;
     public Tile Grid_WhenMouseDown;
+
+    
     
     private void Awake(){
         Tilemap = GetComponent<Tilemap>();
         board = GetComponentInChildren<Board>();
+        game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
+        width = game.width;
+        height = game.height;
     }
 
     public void setCellPosition(Vector3Int cellPosition){
@@ -31,7 +37,7 @@ public class GlowGrid : MonoBehaviour
             Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid_WhenMouseDown);
         }
         else{
-            Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid);
+            Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid_whenMouseOver);
         }
     }
     public void eraseGlowGrid(){
