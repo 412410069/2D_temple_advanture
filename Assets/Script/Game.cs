@@ -143,14 +143,14 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        eraseGlow();
+        glowGrid.eraseGlow();
         Reavel();
         PlayerMeetMine();
         // PlayerMeetMonster();
         itemShield();
         isValidSearchMine();
         forceMonster();
-        glow();
+        glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
     }
 
     private void Reavel(){
@@ -247,7 +247,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    private Cell GetCell(int x, int y){
+    public Cell GetCell(int x, int y){
         if (IsVaild(x,y)){
             return state[x,y];
         }
@@ -287,17 +287,7 @@ public class Game : MonoBehaviour
             Debug.Log("EEEEEE");
         }
     }
-
-    public void glow(){
-        Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-        Cell cell = GetCell(cellPosition.x,cellPosition.y); 
-        glowGrid.setCellPosition(cellPosition);
-        glowGrid.glowGrid();
-    }
-    public void eraseGlow(){
-        glowGrid.eraseGlowGrid();
-    }
+    
     public void backToMainMenu(){
         SceneManager.LoadSceneAsync(0);
     }

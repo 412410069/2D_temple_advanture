@@ -26,13 +26,19 @@ public class GlowGrid : MonoBehaviour
         height = game.height;
     }
 
+
     public void setCellPosition(Vector3Int cellPosition){
         if(cellPosition.x < width && cellPosition.y < height){
             cellPositionX = cellPosition.x;
             cellPositionY = cellPosition.y;
         }
     }
-    public void glowGrid(){
+
+    public void glow(Vector3Int cellPosition){
+        // Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // Vector3Int cellPosition = board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        Cell cell = game.GetCell(cellPosition.x,cellPosition.y); 
+        setCellPosition(cellPosition);
         if(Input.GetMouseButton(0) == true){
             Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid_WhenMouseDown);
         }
@@ -40,9 +46,11 @@ public class GlowGrid : MonoBehaviour
             Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid_whenMouseOver);
         }
     }
-    public void eraseGlowGrid(){
+    
+    public void eraseGlow(){
         Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), null);
     }
+
     // public void OnMouseOver(){
     //     Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid);
     // }
