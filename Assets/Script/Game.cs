@@ -22,12 +22,12 @@ public class Game : MonoBehaviour
     public GameObject player;
     public MainMenu mainMenu;
     public GameObject exitScene;
-    public GameObject shield;
+    public ItemShield shield;//
     public GlowGrid glowGrid;
-    public float shieldOpenTime;
-    public float defultShieldOpenTime = 3;
-    public float shieldTimer;
-    public float secondRate = 1;
+    public float shieldOpenTime;//
+    public float defultShieldOpenTime = 3;//
+    public float shieldTimer;//
+    public float secondRate = 1;//
     public float searchMineTimer;
     public float searchMineTime;
     public float defultSearchMineTime = 10; 
@@ -40,7 +40,7 @@ public class Game : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         monster = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
         glowGrid = GetComponentInChildren<GlowGrid>();
-        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject;
+        shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject.GetComponent<ItemShield>();
     }
 
     private void Start(){
@@ -147,7 +147,7 @@ public class Game : MonoBehaviour
         Reavel();
         PlayerMeetMine();
         // PlayerMeetMonster();
-        itemShield();
+        shield.itemShield(playerState);
         isValidSearchMine();
         forceMonster();
         glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
@@ -181,37 +181,7 @@ public class Game : MonoBehaviour
     }
     
 
-    private void itemShield(){
-        if(!playerState.gameOver && (Input.GetKeyDown(KeyCode.Keypad1) == true || Input.GetKeyDown(KeyCode.Alpha1) == true)){
-            openShield();
-        }
-
-        if(shieldTimer < secondRate){           //控制真實秒數時間
-            shieldTimer += Time.deltaTime;
-        }
-        else{
-            if(shieldOpenTime > 0){
-                shieldOpenTime -= 1;
-                shieldTimer = 0;
-            }
-        }
-        if(playerState.isShieldOpen && shieldOpenTime == 0){
-            closeShield();
-        }
-    }
-
-    private void openShield(){      //開啟護盾的數秒內，碰到炸彈不會結束遊戲
-        Debug.Log("Shield open!");
-        playerState.isShieldOpen = true;
-        shieldOpenTime = defultShieldOpenTime;
-        shield.SetActive(true);
-    }
-    private void closeShield(){ 
-        Debug.Log("Shield closed");
-        playerState.isShieldOpen = false;
-        shield.SetActive(false);
-        shieldOpenTime = -1;
-    }
+    
 
     private void isValidSearchMine(){
         if (searchMineTimer < secondRate){
