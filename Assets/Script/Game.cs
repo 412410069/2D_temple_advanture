@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using JetBrains.Annotations;
 using Unity.Collections;
 using Unity.VisualScripting;
@@ -58,6 +59,7 @@ public class Game : MonoBehaviour
         board.Draw(state);
         monster.GenerateMonster1();
         monster.GenerateMonsterWithView();
+        GenerateArtifact();
     }
     
     private void GenerateCells(){
@@ -141,6 +143,20 @@ public class Game : MonoBehaviour
         return count;
     }
 
+    private void GenerateArtifact(){
+        bool spawned = false;
+        while(!spawned){
+            int x = Random.Range(0, width);
+            int y = Random.Range(0, height);
+            
+            if(state[x, y].type == Cell.Type.Empty){
+                Vector3Int pos = new(x, y, 0);
+                GetComponent<ArtifactList>().InstantiateArtifact(pos);
+                spawned = true;
+            }
+        }
+    }   
+
     void Update()
     {
         glowGrid.eraseGlow();
@@ -180,9 +196,6 @@ public class Game : MonoBehaviour
         }
     }
     
-
-    
-
     private void isValidSearchMine(){
         if (searchMineTimer < secondRate){
             searchMineTimer += Time.deltaTime;
@@ -200,7 +213,7 @@ public class Game : MonoBehaviour
     }
 
     private void searchMine(){
-        Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         Cell cell = GetCell(cellPosition.x,cellPosition.y); 
         if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
@@ -250,7 +263,7 @@ public class Game : MonoBehaviour
     }
 
     private void forceMonster(){
-        Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
         if (!playerState.gameOver && Input.GetKeyDown(KeyCode.E)){
             playerState.isValidMonsterMovement = true;

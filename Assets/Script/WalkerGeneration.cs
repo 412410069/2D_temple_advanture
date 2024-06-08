@@ -63,7 +63,7 @@ public class WalkerGeneration : MonoBehaviour
                     //hasCreatedEmpty = true;
                 }
             }
-
+            
             ChanceToRemove();
             ChanceToRedirect();
             ChanceToCreate();
