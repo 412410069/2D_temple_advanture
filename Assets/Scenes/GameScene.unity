@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 247440032}
   - component: {fileID: 247440034}
   - component: {fileID: 247440035}
+  - component: {fileID: 247440036}
   m_Layer: 0
   m_Name: Grid
   m_TagString: grid
@@ -582,6 +583,22 @@ MonoBehaviour:
   tileCount: 0
   fillPercentage: 0.4
   waitTime: 0.05
+--- !u!114 &247440036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247440031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312b54623fcdada4eb26a1a9fd108459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  artifactList:
+  - {fileID: 11400000, guid: 215056df17575c645ab98002ca6bee4d, type: 2}
+  - {fileID: 11400000, guid: 6fdb7387c50c6004fb4ede3757d77ec4, type: 2}
+  artifactPrefab: {fileID: 3089764545306499189, guid: e80d85e2f70c0d44f8cb330105793986, type: 3}
 --- !u!1 &493138916
 GameObject:
   m_ObjectHideFlags: 0
