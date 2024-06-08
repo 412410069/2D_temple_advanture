@@ -209,7 +209,7 @@ public class Game : MonoBehaviour
         if (!playerState.gameOver && searchMineTime <= 0 && !playerState.spellCooldown){
             searchMine();
         }
-        Debug.Log(searchMineTime);
+        // Debug.Log(searchMineTime);
     }
 
     private void searchMine(){

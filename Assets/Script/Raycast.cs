@@ -17,6 +17,7 @@ public class Raycast : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVCheck());
     }
 

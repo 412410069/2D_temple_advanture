@@ -67,12 +67,14 @@ public class MonsterWithViewFieldMove : MonoBehaviour
         x = (int)transform.position.x;
         y = (int)transform.position.y;
 
-        if(false){
+        if(raycast.CanSeePlayer){
             MonsterMoveTrack();
+            Debug.Log("CanSee");
         }
 
         else{
             MonsterMoveRandom();
+            Debug.Log("NoSee");
         }
 
         transform.position = Vector3.MoveTowards(transform.position, position, moveDistance);
