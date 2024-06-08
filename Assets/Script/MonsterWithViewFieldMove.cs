@@ -130,30 +130,37 @@ public class MonsterWithViewFieldMove : MonoBehaviour
     }
 
     private void MonsterMoveRandom(){
-        direction = Random.Range(0, 4);
+        int cnt = 0;
+        while(cnt == 0){
+            direction = Random.Range(0, 4);
 
-        switch (direction)
-        {
-            case 0:
-                if(game.state[x, y + 1].type == Cell.Type.Wall || game.state[x, y + 1].type == Cell.Type.Void) return;
-                if(game.state[x, y + 1].revealed && game.state[x, y + 1].type == Cell.Type.Mine) return;
-                position += new Vector3Int(0, 1, 0);
-                break;
-            case 1:
-                if(game.state[x, y - 1].type == Cell.Type.Wall || game.state[x, y - 1].type == Cell.Type.Void) return;
-                if(game.state[x, y - 1].revealed && game.state[x, y - 1].type == Cell.Type.Mine) return;
-                position += new Vector3Int(0, -1, 0);
-                break;
-            case 2:
-                if(game.state[x - 1, y].type == Cell.Type.Wall || game.state[x - 1, y].type == Cell.Type.Void) return;
-                if(game.state[x - 1, y].revealed && game.state[x - 1, y].type == Cell.Type.Mine) return;
-                position += new Vector3Int(-1, 0, 0);
-                break;
-            case 3:
-                if(game.state[x + 1, y].type == Cell.Type.Wall || game.state[x + 1, y].type == Cell.Type.Void) return;
-                if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) return;
-                position += new Vector3Int(1, 0, 0);
-                break;
+            switch (direction)
+            {
+                case 0:
+                    if(game.state[x, y + 1].type == Cell.Type.Wall || game.state[x, y + 1].type == Cell.Type.Void) continue;
+                    if(game.state[x, y + 1].revealed && game.state[x, y + 1].type == Cell.Type.Mine) continue;
+                    position += new Vector3(0, 1, 0);
+                    ++cnt;
+                    break;
+                case 1:
+                    if(game.state[x, y - 1].type == Cell.Type.Wall || game.state[x, y - 1].type == Cell.Type.Void) continue;
+                    if(game.state[x, y - 1].revealed && game.state[x, y - 1].type == Cell.Type.Mine) continue;
+                    position += new Vector3(0, -1, 0);
+                    ++cnt;
+                    break;
+                case 2:
+                    if(game.state[x - 1, y].type == Cell.Type.Wall || game.state[x - 1, y].type == Cell.Type.Void) continue;
+                    if(game.state[x - 1, y].revealed && game.state[x - 1, y].type == Cell.Type.Mine) continue;
+                    position += new Vector3(-1, 0, 0);
+                    ++cnt;
+                    break;
+                case 3:
+                    if(game.state[x + 1, y].type == Cell.Type.Wall || game.state[x + 1, y].type == Cell.Type.Void) continue;
+                    if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) continue;
+                    position += new Vector3(1, 0, 0);
+                    ++cnt;
+                    break;
+            }
         }
     }
 
