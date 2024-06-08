@@ -7,8 +7,8 @@ public class MonsterWithViewFieldMove : MonoBehaviour
     public Game game;
     public Monster1Movement Monster1Movement;
     public PlayerState playerState;
-    public Raycast raycast;
     public Board board;
+    private Raycast raycast;
     private float moveDistance = 1.0f;
     private float moveInterval = 1.0f;
 
@@ -31,9 +31,9 @@ public class MonsterWithViewFieldMove : MonoBehaviour
     void Awake(){
         game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
         Monster1Movement = GameObject.FindGameObjectWithTag("monster1").GetComponent<Monster1Movement>();
-        raycast = GameObject.FindGameObjectWithTag("monsterWithView").GetComponent<Raycast>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
         board = GameObject.FindGameObjectWithTag("grid").GetComponentInChildren<Board>();
+        raycast = GetComponent<Raycast>();
     }
 
     void Update()
