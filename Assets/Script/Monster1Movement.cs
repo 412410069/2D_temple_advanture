@@ -127,6 +127,8 @@ public class Monster1Movement : MonoBehaviour
 
     private void MonsterMoveRandom(){
         int cnt = 0;
+        bool[] used = new bool[4];
+        
         while(cnt == 0){
             direction = Random.Range(0, 4);
 
@@ -137,25 +139,33 @@ public class Monster1Movement : MonoBehaviour
                     if(game.state[x, y + 1].revealed && game.state[x, y + 1].type == Cell.Type.Mine) continue;
                     position += new Vector3(0, 1, 0);
                     ++cnt;
+                    used[0] = true;
                     break;
                 case 1:
                     if(game.state[x, y - 1].type == Cell.Type.Wall || game.state[x, y - 1].type == Cell.Type.Void) continue;
                     if(game.state[x, y - 1].revealed && game.state[x, y - 1].type == Cell.Type.Mine) continue;
                     position += new Vector3(0, -1, 0);
                     ++cnt;
+                    used[1] = true;
                     break;
                 case 2:
                     if(game.state[x - 1, y].type == Cell.Type.Wall || game.state[x - 1, y].type == Cell.Type.Void) continue;
                     if(game.state[x - 1, y].revealed && game.state[x - 1, y].type == Cell.Type.Mine) continue;
                     position += new Vector3(-1, 0, 0);
                     ++cnt;
+                    used[2] = true;
                     break;
                 case 3:
                     if(game.state[x + 1, y].type == Cell.Type.Wall || game.state[x + 1, y].type == Cell.Type.Void) continue;
                     if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) continue;
                     position += new Vector3(1, 0, 0);
                     ++cnt;
+                    used[3] = true;
                     break;
+            }
+
+            if(used[0] && used[1] && used[2] && used[3]){
+                break;
             }
         }
     }
