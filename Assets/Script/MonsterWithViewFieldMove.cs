@@ -66,7 +66,7 @@ public class MonsterWithViewFieldMove : MonoBehaviour
         x = (int)transform.position.x;
         y = (int)transform.position.y;
 
-        if(raycast.IsPlayerInSight()){
+        if(false){
             MonsterMoveTrack();
         }
 

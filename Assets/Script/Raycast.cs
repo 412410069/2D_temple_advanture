@@ -1,100 +1,83 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-
-public class RayData
-{
-    public Vector2 m_start;
-    public float m_distance;
-    public float m_angle;
-    public Vector2 m_direction;
-    public Vector2 m_end;
-    public Collider m_hitCollider;
-    public bool m_hit;
-
-    public RayData(Vector2 start, float angle, float distance)
-    {
-        m_start = start;
-        m_distance = distance;
-        UpdateDirection(angle);
-    }
-
-    public void UpdateDirection(float angle)
-    {
-        m_angle = angle;
-        m_direction = DirectionFromAngle(m_angle);
-        m_end = m_start + m_direction * m_distance;
-    }
-
-    private Vector2 DirectionFromAngle(float angle)
-    {
-        float radians = angle * Mathf.Deg2Rad;
-        return new Vector2(Mathf.Sin(radians), Mathf.Cos(radians));
-    }
-}
+using UnityEngine.Rendering;
 
 public class Raycast : MonoBehaviour
 {
-    public float _radius = 5.0f;
-    public int _divide = 20;
+    public float radius = 5f;
+    [Range(1, 360)]public float angle = 360f;
+    public LayerMask targetLayer;
+    public LayerMask obstructionLayer;
+
     public GameObject player;
 
-    private RaycastHit _hit;
+    public bool CanSeePlayer { get; private set;}
 
-    private RayData[] GetOriginalDatas()
+    void Start()
     {
-        RayData[] rayDatas = new RayData[_divide + 1];
-        Vector2 center = transform.position;
-        float startAngle = transform.eulerAngles.z - 360f / 2;
-        float angleIncrement = 360f / _divide;
-
-        for (int i = 0; i <= _divide; i++)
-        {
-            float currentAngle = startAngle + angleIncrement * i;
-            rayDatas[i] = new RayData(center, currentAngle, _radius);
-        }
-
-        return rayDatas;
+        StartCoroutine(FOVCheck());
     }
 
-    private RayData[] GetNormalDatas()
-    {
-        RayData[] rayDatas = GetOriginalDatas();
+    private IEnumerator FOVCheck(){
+        WaitForSeconds wait = new (0.5f);
 
-        for (int i = 0; i < rayDatas.Length; i++)
-        {
-            UpdateRaycast(rayDatas[i]);
-        }
-
-        return rayDatas;
-    }
-
-    private void UpdateRaycast(RayData rayData)
-    {
-        rayData.m_hit = Physics.Raycast(transform.position, rayData.m_direction, out _hit, _radius);
-
-        if (rayData.m_hit)
-        {
-            rayData.m_hitCollider = _hit.collider;
-            rayData.m_end = _hit.point;
-        }
-        else
-        {
-            rayData.m_hitCollider = null;
-            rayData.m_end = rayData.m_start + rayData.m_direction * _radius;
+        while(true){
+            yield return wait;
+            FOV();
         }
     }
 
-    public bool IsPlayerInSight()
-    {
-        RayData[] rayDatas = GetNormalDatas();
+    private void FOV(){
+        Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
 
-        foreach (RayData rayData in rayDatas)
-        {
-            if (rayData.m_hit && rayData.m_hitCollider.gameObject == player)
-            {
-                return true;
+        if(rangeCheck.Length > 0){
+            Transform target = rangeCheck[0].transform;
+            Vector2 directionToTarget = (target.position - transform.position).normalized;
+
+            if(Vector2.Angle(transform.up, directionToTarget) < angle / 2){
+                float distanceToTarget = Vector2.Distance(transform.position, target.position);
+
+                if(!Physics2D.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionLayer)){
+                    CanSeePlayer = true;
+                }
+
+                else{
+                    CanSeePlayer = false;
+                }
+            }
+
+            else{
+                CanSeePlayer = false;
             }
         }
 
-        return false;
+        else if(CanSeePlayer){
+            CanSeePlayer = false;
+        }
+    }
+
+    private void OnDrawGizmos(){
+        Gizmos.color = Color.white;
+        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+
+        Vector3 angle01 = DirectionFromAngle(-transform.eulerAngles.z, -angle / 2);
+        Vector3 angle02 = DirectionFromAngle(-transform.eulerAngles.z, angle / 2);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + angle01 * radius);
+        Gizmos.DrawLine(transform.position, transform.position + angle02 * radius);
+
+        if(CanSeePlayer){
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, player.transform.position);
+        }
+    }
+
+    private Vector2 DirectionFromAngle(float eulerY, float angleInDegrees){
+        angleInDegrees += eulerY;
+
+        return new Vector2(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
 }
