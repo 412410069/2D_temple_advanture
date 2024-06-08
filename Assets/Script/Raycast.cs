@@ -22,7 +22,7 @@ public class Raycast : MonoBehaviour
     }
 
     private IEnumerator FOVCheck(){
-        WaitForSeconds wait = new WaitForSeconds(0.5f);
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
 
         while(true){
             yield return wait;

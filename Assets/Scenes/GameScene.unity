@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 247440034}
   - component: {fileID: 247440035}
   - component: {fileID: 247440036}
+  - component: {fileID: 247440037}
   m_Layer: 0
   m_Name: Grid
   m_TagString: grid
@@ -554,6 +555,7 @@ MonoBehaviour:
   mineNum: 150
   playerState: {fileID: 0}
   monster: {fileID: 0}
+  wall: {fileID: 0}
   player: {fileID: 0}
   mainMenu: {fileID: 0}
   exitScene: {fileID: 1088702723}
@@ -599,6 +601,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 215056df17575c645ab98002ca6bee4d, type: 2}
   - {fileID: 11400000, guid: 6fdb7387c50c6004fb4ede3757d77ec4, type: 2}
   artifactPrefab: {fileID: 3089764545306499189, guid: e80d85e2f70c0d44f8cb330105793986, type: 3}
+--- !u!114 &247440037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247440031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757ee0adbf8f5d2419403c28714d9dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  wall: {fileID: 1019926176}
 --- !u!1 &493138916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,7 +1638,7 @@ GameObject:
   - component: {fileID: 1019926178}
   m_Layer: 9
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1636,7 +1652,7 @@ Transform:
   m_GameObject: {fileID: 1019926176}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 5, z: 0}
+  m_LocalPosition: {x: -12.05, y: 2.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

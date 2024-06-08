@@ -20,6 +20,7 @@ public class Game : MonoBehaviour
     private WalkerGeneration walkerGeneration;
     public PlayerState playerState;
     public MonsterInitial monster;
+    public WallCollider wall;
     public GameObject player;
     public MainMenu mainMenu;
     public GameObject exitScene;
@@ -42,6 +43,7 @@ public class Game : MonoBehaviour
         monster = GameObject.FindGameObjectWithTag("monster").GetComponent<MonsterInitial>();
         glowGrid = GetComponentInChildren<GlowGrid>();
         shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject.GetComponent<ItemShield>();
+        wall = GameObject.FindGameObjectWithTag("grid").GetComponent<WallCollider>();
     }
 
     private void Start(){
@@ -57,6 +59,7 @@ public class Game : MonoBehaviour
         GeneratePlayer();
         GenerateNumbers();
         board.Draw(state);
+        wall.WallColliderInitial();
         monster.GenerateMonster1();
         monster.GenerateMonsterWithView();
         GenerateArtifact();
