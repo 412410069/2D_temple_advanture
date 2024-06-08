@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1da33b5790c644facdb817d6ed9a3e, type: 3}
   m_Name: Gem
   m_EditorClassIdentifier: 
-  name: Gem
+  artifactName: Gem
   description: Magical purple gem
-  artwork: {fileID: 21300000, guid: bd59bf2e866ed4529ae645637eb9c11d, type: 3}
+  artifactSprite: {fileID: 21300000, guid: bd59bf2e866ed4529ae645637eb9c11d, type: 3}

@@ -133,7 +133,7 @@ public class WalkerGeneration : MonoBehaviour
 
     private void SetEmpty(Cell cell){
         cell.type = Cell.Type.Empty;
-        cell.revealed = false;
+        cell.revealed = true;
     }
 
     private void CreateWalls(Cell[,] dungeon){
