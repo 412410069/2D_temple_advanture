@@ -75,7 +75,7 @@ public class MonsterWithViewFieldMove : MonoBehaviour
             MonsterMoveRandom();
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, position, moveDistance * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, position, moveDistance);
     }
 
     private void MonsterMoveTrack(){
