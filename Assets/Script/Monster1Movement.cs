@@ -20,7 +20,7 @@ public class Monster1Movement : MonoBehaviour
     private float timer;
 
     private Vector2 player_position;
-    private Vector3 moveDirection;
+    public Vector3 position;
     private float player_x;
     private float player_y;
 
@@ -57,7 +57,8 @@ public class Monster1Movement : MonoBehaviour
 
     private void MonsterMove(){
         player_position = player.transform.position;
-        moveDirection = Vector3.zero;
+        position.x = transform.position.x;
+        position.y = transform.position.y;
 
         player_x = player_position.x;
         player_y = player_position.y;
@@ -72,7 +73,7 @@ public class Monster1Movement : MonoBehaviour
             MonsterMoveRandom();
         }
 
-        transform.position += moveDirection * moveDistance;
+        transform.position = Vector3.MoveTowards(transform.position, position, moveDistance * Time.deltaTime);
     }
 
     private void MonsterMoveTrack(){
@@ -91,11 +92,11 @@ public class Monster1Movement : MonoBehaviour
         for(int i=0;i<2;++i){
             if(direction == 0){
                 if(player_x > x && (game.state[x + 1, y].type != Cell.Type.Wall)){
-                    moveDirection = Vector3.right;
+                    position += new Vector3Int(1, 0, 0);
                 }
 
                 else if(player_x < x && (game.state[x - 1, y].type != Cell.Type.Wall)){
-                        moveDirection = Vector3.left;
+                        position += new Vector3Int(-1, 0, 0);
                 }
                     
                 else{
@@ -106,11 +107,11 @@ public class Monster1Movement : MonoBehaviour
 
             else if(direction == 1){
                 if(player_y > y && (game.state[x, y + 1].type != Cell.Type.Wall)){
-                    moveDirection = Vector3.up;
+                    position += new Vector3Int(0, 1, 0);
                 }
 
                 else if(player_y < y && (game.state[x, y - 1].type != Cell.Type.Wall)){
-                        moveDirection = Vector3.down;
+                        position += new Vector3Int(0, -1, 0);
                 }
 
                 else{
@@ -120,7 +121,7 @@ public class Monster1Movement : MonoBehaviour
             }
 
             else
-            moveDirection = Vector3.zero;
+            position += new Vector3Int(0, 0, 0);
         }
     }
 
@@ -132,22 +133,22 @@ public class Monster1Movement : MonoBehaviour
             case 0:
                 if(game.state[x, y + 1].type == Cell.Type.Wall || game.state[x, y + 1].type == Cell.Type.Void) return;
                 if(game.state[x, y + 1].revealed && game.state[x, y + 1].type == Cell.Type.Mine) return;
-                moveDirection = Vector3.up;
+                position += new Vector3Int(0, 1, 0);
                 break;
             case 1:
                 if(game.state[x, y - 1].type == Cell.Type.Wall || game.state[x, y - 1].type == Cell.Type.Void) return;
                 if(game.state[x, y - 1].revealed && game.state[x, y - 1].type == Cell.Type.Mine) return;
-                moveDirection = Vector3.down;
+                position += new Vector3Int(0, -1, 0);
                 break;
             case 2:
                 if(game.state[x - 1, y].type == Cell.Type.Wall || game.state[x - 1, y].type == Cell.Type.Void) return;
                 if(game.state[x - 1, y].revealed && game.state[x - 1, y].type == Cell.Type.Mine) return;
-                moveDirection = Vector3.left;
+                position += new Vector3Int(-1, 0, 0);
                 break;
             case 3:
                 if(game.state[x + 1, y].type == Cell.Type.Wall || game.state[x + 1, y].type == Cell.Type.Void) return;
                 if(game.state[x + 1, y].revealed && game.state[x + 1, y].type == Cell.Type.Mine) return;
-                moveDirection = Vector3.right;
+                position += new Vector3Int(1, 0, 0);
                 break;
         }
     }
