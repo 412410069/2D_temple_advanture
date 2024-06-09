@@ -1818,7 +1818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b5c0d4d122b5843a6e7cdeaa03c75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
+  radius: 10
   angle: 360
   targetLayer:
     serializedVersion: 2
@@ -3145,7 +3145,7 @@ MonoBehaviour:
   monster1: {fileID: 1689902262}
   monsterWithView: {fileID: 1078181793}
   player: {fileID: 1751122387}
-  numberOfMonster1Clones: 1
+  numberOfMonster1Clones: 5
   numberOfMonsterWithViewClones: 5
   initialSafeDistance: 10
 --- !u!4 &1811878604
