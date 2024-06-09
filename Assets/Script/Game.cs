@@ -26,13 +26,8 @@ public class Game : MonoBehaviour
     public ItemShield shield;//
     public GlowGrid glowGrid;
     public PlayerMeetMineLogic playerMeetMineLogic;
-    public float shieldOpenTime;//
-    public float defultShieldOpenTime = 3;//
-    public float shieldTimer;//
-    public float secondRate = 1;//
-    public float searchMineTimer;
-    public float searchMineTime;
-    public float defultSearchMineTime = 10; 
+    public Skill_Q skill_Q;
+    
     public float glowsecond = 0;
 
     private void Awake(){
@@ -45,6 +40,7 @@ public class Game : MonoBehaviour
         shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject.GetComponent<ItemShield>();
         wall = GameObject.FindGameObjectWithTag("grid").GetComponent<WallCollider>();
         playerMeetMineLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeetMineLogic>();
+        skill_Q = GameObject.FindGameObjectWithTag("Player").GetComponent<Skill_Q>();
     }
 
     private void Start(){
@@ -168,7 +164,7 @@ public class Game : MonoBehaviour
         playerMeetMineLogic.PlayerMeetMine(playerState, state);
         // PlayerMeetMonster();
         shield.itemShield(playerState);
-        isValidSearchMine();
+        skill_Q.isValidSearchMine(playerState, board, GameObject.Find("Grid").GetComponent<Game>(), state);
         forceMonster();
         glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
     }
@@ -185,40 +181,6 @@ public class Game : MonoBehaviour
         cell.revealed = true;
         state[x, y] = cell;
         board.Draw(state);
-    }
-
-    private void isValidSearchMine(){
-        if (searchMineTimer < secondRate){
-            searchMineTimer += Time.deltaTime;
-        }
-        else{
-            if (searchMineTime > 0){
-                searchMineTime -=1;
-                searchMineTimer = 0;
-            }
-        }
-        if (!playerState.gameOver && searchMineTime <= 0 && !playerState.spellCooldown){
-            searchMine();
-        }
-        // Debug.Log(searchMineTime);
-    }
-
-    private void searchMine(){
-        UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-        Cell cell = GetCell(cellPosition.x,cellPosition.y); 
-        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
-            if (cell.revealed){
-                playerState.spellCooldown = false;
-                return;
-            }
-            cell.revealed = true;
-            state[cellPosition.x,cellPosition.y] = cell;
-            board.Draw(state);    
-            searchMineTime = defultSearchMineTime;
-            playerState.spellCooldown = true;
-            Debug.Log(playerState.spellCooldown);
-        }
     }
 
     public Cell GetCell(int x, int y){

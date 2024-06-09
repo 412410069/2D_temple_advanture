@@ -562,13 +562,7 @@ MonoBehaviour:
   shield: {fileID: 0}
   glowGrid: {fileID: 0}
   playerMeetMineLogic: {fileID: 0}
-  shieldOpenTime: 0
-  defultShieldOpenTime: 3
-  shieldTimer: 0
-  secondRate: 1
-  searchMineTimer: 0
-  searchMineTime: 0
-  defultSearchMineTime: 10
+  skill_Q: {fileID: 0}
   glowsecond: 0
 --- !u!114 &247440035
 MonoBehaviour:
@@ -2765,6 +2759,7 @@ GameObject:
   - component: {fileID: 1751122395}
   - component: {fileID: 1751122392}
   - component: {fileID: 1751122393}
+  - component: {fileID: 1751122396}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2975,6 +2970,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverLogic: {fileID: 1088702729}
+--- !u!114 &1751122396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751122387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afb97dcb2bfa05429882e33327bf623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondRate: 1
+  searchMineTimer: 0
+  searchMineTime: 0
+  defultSearchMineTime: 10
 --- !u!1 &1754265700
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class PlayerState : MonoBehaviour
     public bool isMoving;
     public bool meetMine;
     public bool meetMonster;
-    public bool isShieldOpen;
+    public bool isShieldOpen = false;
     public bool gameOver;
     public bool isValidMonsterMovement;
     public bool spellCooldown;
