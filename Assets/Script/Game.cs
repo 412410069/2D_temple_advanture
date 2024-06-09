@@ -7,7 +7,6 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class Game : MonoBehaviour
     public WallCollider wall;
     public GameObject player;
     public MainMenu mainMenu;
-    public GameObject exitScene;
+    public GameOverLogic gameOverLogic; //因為在一開始時他不是開的，我們沒辦法用程式找到他，一定要在inspector中拉進去
     public ItemShield shield;//
     public GlowGrid glowGrid;
     public float shieldOpenTime;//
@@ -194,7 +193,7 @@ public class Game : MonoBehaviour
                 Debug.Log("meet mine!");
                 playerState.meetMine = true;
                 playerState.gameOver = true;
-                gameOver();             //還沒辦法找到ExitScene
+                gameOverLogic.gameOver();             //還沒辦法找到ExitScene
             }
         }
     }
@@ -273,12 +272,5 @@ public class Game : MonoBehaviour
             Debug.Log("EEEEEE");
         }
     }
-    
-    public void backToMainMenu(){
-        SceneManager.LoadSceneAsync(0);
-    }
-
-    public void gameOver(){     //記得沒有辦法找到Scene
-        exitScene.SetActive(true);
-    }
 }
+    

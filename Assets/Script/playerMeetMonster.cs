@@ -5,12 +5,11 @@ using UnityEngine;
 public class playerMeetMonster : MonoBehaviour
 {
     PlayerState playerState;
-    Game game;
+    public GameOverLogic gameOverLogic; //因為在一開始時他不是開的，我們沒辦法用程式找到他，一定要在inspector中拉進去
     // Start is called before the first frame update
     void Start()
     {
         playerState = GetComponent<PlayerState>();
-        game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
     }
 
     // Update is called once per frame
@@ -42,6 +41,6 @@ public class playerMeetMonster : MonoBehaviour
     public void playermeetMonsterAndEndGame(){
          playerState.gameOver = true;
             playerState.meetMonster = true;
-            game.gameOver();
+            gameOverLogic.gameOver();
     }
 }
