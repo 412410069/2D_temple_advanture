@@ -25,6 +25,7 @@ public class Game : MonoBehaviour
     public GameOverLogic gameOverLogic; //因為在一開始時他不是開的，我們沒辦法用程式找到他，一定要在inspector中拉進去
     public ItemShield shield;//
     public GlowGrid glowGrid;
+    public PlayerMeetMineLogic playerMeetMineLogic;
     public float shieldOpenTime;//
     public float defultShieldOpenTime = 3;//
     public float shieldTimer;//
@@ -43,6 +44,7 @@ public class Game : MonoBehaviour
         glowGrid = GetComponentInChildren<GlowGrid>();
         shield = GameObject.FindGameObjectWithTag("Player").gameObject.transform.GetChild(0).gameObject.GetComponent<ItemShield>();
         wall = GameObject.FindGameObjectWithTag("grid").GetComponent<WallCollider>();
+        playerMeetMineLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeetMineLogic>();
     }
 
     private void Start(){
@@ -163,7 +165,7 @@ public class Game : MonoBehaviour
     {
         glowGrid.eraseGlow();
         Reavel();
-        PlayerMeetMine();
+        playerMeetMineLogic.PlayerMeetMine(playerState, state);
         // PlayerMeetMonster();
         shield.itemShield(playerState);
         isValidSearchMine();
@@ -185,19 +187,6 @@ public class Game : MonoBehaviour
         board.Draw(state);
     }
 
-    private void PlayerMeetMine(){
-        int x = playerState.position.x;
-        int y = playerState.position.y;
-        if(!playerState.gameOver && !playerState.isMoving && !playerState.isShieldOpen){
-            if(state[x, y].type == Cell.Type.Mine){
-                Debug.Log("meet mine!");
-                playerState.meetMine = true;
-                playerState.gameOver = true;
-                gameOverLogic.gameOver();             //還沒辦法找到ExitScene
-            }
-        }
-    }
-    
     private void isValidSearchMine(){
         if (searchMineTimer < secondRate){
             searchMineTimer += Time.deltaTime;
