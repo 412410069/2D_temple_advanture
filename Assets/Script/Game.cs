@@ -1,3 +1,4 @@
+//處理有關遊戲初始化以及遊戲更新
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -50,7 +51,7 @@ public class Game : MonoBehaviour
     }
 
     private void NewGame(){
-        state = new Cell[width, height];
+        state = new Cell[width, height];    //state 紀錄的是地圖上所有地磚的狀態
         
         GenerateCells();
         walkerGeneration.Generate(state);

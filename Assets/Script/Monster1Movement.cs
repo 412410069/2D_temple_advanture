@@ -1,3 +1,4 @@
+//處理怪物移動，隨機移動版本
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;

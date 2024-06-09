@@ -1,3 +1,4 @@
+//處存有關玩家的狀態
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,4 @@
+//遊戲結束時的處理
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;

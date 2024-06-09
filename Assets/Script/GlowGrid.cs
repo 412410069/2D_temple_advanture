@@ -1,3 +1,4 @@
+//配合skills，方便玩家查看現在的滑鼠指到的是哪一個地磚
 using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;

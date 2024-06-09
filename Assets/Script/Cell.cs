@@ -1,3 +1,4 @@
+//地磚的性質
 using UnityEngine;
 
 public class Cell

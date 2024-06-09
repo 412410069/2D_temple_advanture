@@ -1,3 +1,4 @@
+//Q技能：探測，功能為可以遠距開啟一格資訊
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

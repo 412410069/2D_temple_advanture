@@ -1,3 +1,4 @@
+//處理當玩家採到炸彈時
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

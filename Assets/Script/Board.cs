@@ -1,3 +1,4 @@
+//地圖的所有圖片與建構function
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class Board : MonoBehaviour
 {
     public Tilemap Tilemap {get; private set;}
 
-    public Tile tileUnknown;
+    public Tile tileUnknown;    //各種鋪在地圖上的地磚
     public Tile tileEmpty;
     public Tile tileMine;
     public Tile tileExploded;
@@ -28,7 +29,7 @@ public class Board : MonoBehaviour
         Tilemap = GetComponent<Tilemap>();
     }
 
-    public void Draw(Cell[,] state){
+    public void Draw(Cell[,] state){    //建構地圖
         int width = state.GetLength(0);
         int height = state.GetLength(1);
 

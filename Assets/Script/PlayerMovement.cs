@@ -1,3 +1,4 @@
+//處離玩家的移動
 using System;
 using System.Collections;
 using System.Collections.Generic;

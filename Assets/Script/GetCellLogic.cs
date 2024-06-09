@@ -1,3 +1,4 @@
+//取得地圖地磚的資訊
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

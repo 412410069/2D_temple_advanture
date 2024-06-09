@@ -1,3 +1,4 @@
+//處理玩家碰到怪獸
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,4 @@
+// 處理Item_Shield ，功能為當玩家開啟護盾時，採到炸彈遊戲不會結束
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,9 @@ public class ItemShield : MonoBehaviour
 {
     // public PlayerState playerState;      //這邊有一個很酷的東西，如果我想要用awake那邊的去找playerState，會找不到，完全不知道為什麼
     public GameObject shield;   //去unity抓shield過來
-    public float shieldOpenTime;
+    public float shieldOpenTime;    //記錄到目前為止護盾開啟了幾秒
     public float defultShieldOpenTime = 3;
-    public float shieldTimer;
+    public float shieldTimer;   //控制 1秒針真實時間
     public float secondRate = 1;
 
     private void Awake(){
