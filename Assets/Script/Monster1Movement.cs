@@ -12,8 +12,8 @@ public class Monster1Movement : MonoBehaviour
     public Board board;
 
 
-    private float moveDistance = 1.0f;
-    private float moveInterval = 1.0f;
+    public float moveDistance = 1.0f;
+    public float moveInterval = 1.0f;
 
     public GameObject player;
     public int trackDistance = 10;
