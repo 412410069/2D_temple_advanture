@@ -8,6 +8,11 @@ public class Skill_Q : MonoBehaviour
     public float searchMineTimer;
     public float searchMineTime;
     public float defultSearchMineTime = 10; 
+    public GetCellLogic getCellLogic;
+
+    private void Awake(){
+        getCellLogic = GameObject.FindGameObjectWithTag("grid").GetComponent<GetCellLogic>();
+    }
 
     public void isValidSearchMine(PlayerState playerState, Board board, Game game, Cell[, ] state){
         if (searchMineTimer < secondRate){
@@ -28,7 +33,7 @@ public class Skill_Q : MonoBehaviour
     private void searchMine(PlayerState playerState, Board board, Game game, Cell[, ] state){
         UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-        Cell cell = game.GetCell(cellPosition.x,cellPosition.y); 
+        Cell cell = getCellLogic.GetCell(cellPosition.x,cellPosition.y, state); 
         if (!playerState.gameOver && Input.GetKeyDown(KeyCode.Q)){
             if (cell.revealed){
                 playerState.spellCooldown = false;

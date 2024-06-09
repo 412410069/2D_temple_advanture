@@ -168,23 +168,9 @@ public class Game : MonoBehaviour
         shield.itemShield(playerState);
         skill_Q.isValidSearchMine(playerState, board, GameObject.Find("Grid").GetComponent<Game>(), state);
         forceMonster();
-        glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)), state);
     }
 
-    
-
-    public Cell GetCell(int x, int y){
-        if (IsVaild(x,y)){
-            return state[x,y];
-        }
-        else{
-            return new Cell();
-        }
-    }
-
-    private bool IsVaild(int x, int y){
-        return x >= 0 && x < width && y >= 0 && y < height; 
-    }
     private void forceMonster(){
         UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);

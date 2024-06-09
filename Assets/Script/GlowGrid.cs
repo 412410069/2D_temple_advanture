@@ -12,6 +12,7 @@ public class GlowGrid : MonoBehaviour
     public Tilemap Tilemap {get; private set;}
     private Board board;
     private Game game;
+    private GetCellLogic getCellLogic;
 
     public Tile Grid_whenMouseOver;
     public Tile Grid_WhenMouseDown;
@@ -22,23 +23,24 @@ public class GlowGrid : MonoBehaviour
         Tilemap = GetComponent<Tilemap>();
         board = GetComponentInChildren<Board>();
         game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
+        getCellLogic = GameObject.FindGameObjectWithTag("grid").GetComponent<GetCellLogic>();
         width = game.width;
         height = game.height;
     }
 
 
-    public void setCellPosition(Vector3Int cellPosition){
+    public void setCellPosition(Vector3Int cellPosition, Cell[, ] state){
         if(cellPosition.x < width && cellPosition.y < height){
             cellPositionX = cellPosition.x;
             cellPositionY = cellPosition.y;
         }
     }
 
-    public void glow(Vector3Int cellPosition){
+    public void glow(Vector3Int cellPosition, Cell[, ] state){
         // Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         // Vector3Int cellPosition = board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        Cell cell = game.GetCell(cellPosition.x,cellPosition.y); 
-        setCellPosition(cellPosition);
+        Cell cell = getCellLogic.GetCell(cellPosition.x,cellPosition.y, state); 
+        setCellPosition(cellPosition, state);
         if(Input.GetMouseButton(0) == true){
             Tilemap.SetTile(new Vector3Int(cellPositionX, cellPositionY, 1), Grid_WhenMouseDown);
         }

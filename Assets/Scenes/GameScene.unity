@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 247440036}
   - component: {fileID: 247440037}
   - component: {fileID: 247440038}
+  - component: {fileID: 247440039}
   m_Layer: 0
   m_Name: Grid
   m_TagString: grid
@@ -622,6 +623,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71b2a7cca6a355546b520100e89da7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &247440039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247440031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9591eb944fc11f142829965d14a80496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &493138916
@@ -3000,6 +3013,7 @@ MonoBehaviour:
   searchMineTimer: 0
   searchMineTime: 0
   defultSearchMineTime: 10
+  getCellLogic: {fileID: 0}
 --- !u!1 &1754265700
 GameObject:
   m_ObjectHideFlags: 0
