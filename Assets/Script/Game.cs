@@ -29,6 +29,7 @@ public class Game : MonoBehaviour
     public PlayerMeetMineLogic playerMeetMineLogic;
     public Skill_Q skill_Q;
     public TileRevealLogic tileRevealLogic;
+    public Skill_E skill_E;
     
     public float glowsecond = 0;
 
@@ -43,6 +44,7 @@ public class Game : MonoBehaviour
         wall = GameObject.FindGameObjectWithTag("grid").GetComponent<WallCollider>();
         playerMeetMineLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeetMineLogic>();
         skill_Q = GameObject.FindGameObjectWithTag("Player").GetComponent<Skill_Q>();
+        skill_E = GameObject.FindGameObjectWithTag("Player").GetComponent<Skill_E>();
         tileRevealLogic = GetComponentInParent<TileRevealLogic>();
     }
 
@@ -168,17 +170,10 @@ public class Game : MonoBehaviour
         // PlayerMeetMonster();
         shield.itemShield(playerState);
         skill_Q.isValidSearchMine(playerState, board, GameObject.Find("Grid").GetComponent<Game>(), state);
-        forceMonster();
+        skill_E.forceMonster(playerState, board);
         glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)), state);
     }
 
-    private void forceMonster(){
-        UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
-        if (!playerState.gameOver && Input.GetKeyDown(KeyCode.E)){
-            playerState.isValidMonsterMovement = true;
-            Debug.Log("EEEEEE");
-        }
-    }
+    
 }
     

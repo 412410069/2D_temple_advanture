@@ -566,6 +566,7 @@ MonoBehaviour:
   playerMeetMineLogic: {fileID: 0}
   skill_Q: {fileID: 0}
   tileRevealLogic: {fileID: 0}
+  skill_E: {fileID: 0}
   glowsecond: 0
 --- !u!114 &247440035
 MonoBehaviour:
@@ -2787,6 +2788,7 @@ GameObject:
   - component: {fileID: 1751122392}
   - component: {fileID: 1751122393}
   - component: {fileID: 1751122396}
+  - component: {fileID: 1751122397}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3014,6 +3016,18 @@ MonoBehaviour:
   searchMineTime: 0
   defultSearchMineTime: 10
   getCellLogic: {fileID: 0}
+--- !u!114 &1751122397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751122387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0465e6d1dc500934f90a764d6f16f9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1754265700
 GameObject:
   m_ObjectHideFlags: 0
