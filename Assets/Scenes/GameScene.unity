@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44ad3ba59ebf994baf2aac7d883d289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Grid_whenMouseOver: {fileID: 0}
+  Grid_whenMouseOver: {fileID: 11400000, guid: b668ac0738da05f4f84da18980510458, type: 2}
   Grid_WhenMouseDown: {fileID: 11400000, guid: 0f70c0138b1ee89429299c3d586e28e6, type: 2}
 --- !u!483693784 &566943069
 TilemapRenderer:
@@ -1819,7 +1819,6 @@ MonoBehaviour:
   game: {fileID: 0}
   Monster1Movement: {fileID: 0}
   playerState: {fileID: 0}
-  raycast: {fileID: 0}
   board: {fileID: 0}
   player: {fileID: 1751122387}
   position: {x: 0, y: 0, z: 0}
