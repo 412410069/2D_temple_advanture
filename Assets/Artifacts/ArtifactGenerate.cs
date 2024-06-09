@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArtifactList : MonoBehaviour
+public class ArtifactGenerate : MonoBehaviour
 {
     public Artifact[] artifactList;
     public GameObject artifactPrefab;

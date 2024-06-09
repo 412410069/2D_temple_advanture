@@ -156,7 +156,7 @@ public class Game : MonoBehaviour
             
             if(state[x, y].type == Cell.Type.Empty){
                 Vector3Int pos = new(x, y, 0);
-                GetComponent<ArtifactList>().InstantiateArtifact(pos);
+                GetComponent<ArtifactGenerate>().InstantiateArtifact(pos);
                 spawned = true;
             }
         }
