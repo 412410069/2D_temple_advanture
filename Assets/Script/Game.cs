@@ -27,6 +27,7 @@ public class Game : MonoBehaviour
     public GlowGrid glowGrid;
     public PlayerMeetMineLogic playerMeetMineLogic;
     public Skill_Q skill_Q;
+    public TileRevealLogic tileRevealLogic;
     
     public float glowsecond = 0;
 
@@ -41,6 +42,7 @@ public class Game : MonoBehaviour
         wall = GameObject.FindGameObjectWithTag("grid").GetComponent<WallCollider>();
         playerMeetMineLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMeetMineLogic>();
         skill_Q = GameObject.FindGameObjectWithTag("Player").GetComponent<Skill_Q>();
+        tileRevealLogic = GetComponentInParent<TileRevealLogic>();
     }
 
     private void Start(){
@@ -160,7 +162,7 @@ public class Game : MonoBehaviour
     void Update()
     {
         glowGrid.eraseGlow();
-        Reavel();
+        tileRevealLogic.Reavel(playerState, state, board);
         playerMeetMineLogic.PlayerMeetMine(playerState, state);
         // PlayerMeetMonster();
         shield.itemShield(playerState);
@@ -169,19 +171,7 @@ public class Game : MonoBehaviour
         glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
     }
 
-    private void Reavel(){
-        int x = playerState.position.x;
-        int y = playerState.position.y;
-        Cell cell = state[x, y];
-        
-        if(cell.type == Cell.Type.Empty){
-            Flood(cell);
-        }
-        //hey hey
-        cell.revealed = true;
-        state[x, y] = cell;
-        board.Draw(state);
-    }
+    
 
     public Cell GetCell(int x, int y){
         if (IsVaild(x,y)){
@@ -195,26 +185,6 @@ public class Game : MonoBehaviour
     private bool IsVaild(int x, int y){
         return x >= 0 && x < width && y >= 0 && y < height; 
     }
-
-    private void Flood(Cell cell){
-        if(cell.revealed) return;
-        if(cell.type == Cell.Type.Mine || cell.type == Cell.Type.Wall) return;
-
-        cell.revealed = true;
-        state[cell.position.x, cell.position.y] = cell;
-
-        if(cell.type == Cell.Type.Empty){
-            Flood(state[cell.position.x + 1, cell.position.y]);
-            Flood(state[cell.position.x + 1, cell.position.y + 1]);
-            Flood(state[cell.position.x, cell.position.y + 1]);
-            Flood(state[cell.position.x - 1, cell.position.y + 1]);
-            Flood(state[cell.position.x - 1, cell.position.y]);
-            Flood(state[cell.position.x - 1, cell.position.y - 1]);
-            Flood(state[cell.position.x, cell.position.y - 1]);
-            Flood(state[cell.position.x + 1, cell.position.y - 1]);
-        }
-    }
-
     private void forceMonster(){
         UnityEngine.Vector3 WorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cellPosition = board.Tilemap.WorldToCell(WorldPosition);
