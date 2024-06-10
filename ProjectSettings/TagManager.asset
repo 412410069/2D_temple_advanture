@@ -10,6 +10,7 @@ TagManager:
   - monster1
   - monsterWithView
   - Wall
+  - ExitSceneControl
   layers:
   - Default
   - TransparentFX

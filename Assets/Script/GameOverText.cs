@@ -11,16 +11,15 @@ public class GameOverText : MonoBehaviour
     public PlayerState playerState;
     private String causeOfDeath = "";
     private String escapedText = "";
+
     void Awake(){
         text = GetComponentInChildren<Text>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
     }
-
-    void Update(){
-        if(playerState.gameOver){
-            Reason();
-            UpdateText();
-        }
+    
+    void Start(){
+        Reason();
+        UpdateText();
     }
 
     private void Reason(){
@@ -31,12 +30,12 @@ public class GameOverText : MonoBehaviour
     }
 
     private void Escape(){
-        if(Random.Range(0, 1) == 1){
+        // if(Random.Range(0, 1) == 1){
             escapedText = "A Successful Run";
-        }
-        else{
-            escapedText = "Flee Like A Chicken";
-        }
+        // }
+        // else{
+        //     escapedText = "Flee Like A Chicken";
+        // }
     }
 
     private void Death(){
@@ -44,7 +43,12 @@ public class GameOverText : MonoBehaviour
             causeOfDeath = "Boooooom!!!";
         }
         if(playerState.meetMonster){
-            causeOfDeath = "Got Slayed By Monsters";
+            if(playerState.isValidMonsterMovement){
+                causeOfDeath = "(>`∀´)> Stuuuupid! What A Failure";
+            }
+            else{
+                causeOfDeath = "Got Slayed By Monsters";
+            }
         }
     }
 
