@@ -163,7 +163,8 @@ public class Game : MonoBehaviour
     }   
 
     void Update()
-    {
+    {   
+        PlayerEscape();
         glowGrid.eraseGlow();
         tileRevealLogic.Reavel(playerState, state, board);
         playerMeetMineLogic.PlayerMeetMine(playerState, state);
@@ -174,6 +175,13 @@ public class Game : MonoBehaviour
         glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)), state);
     }
 
-    
+    void PlayerEscape(){
+        int x = playerState.position.x;
+        int y = playerState.position.y;
+        if(state[x, y].type == Cell.Type.Exit){
+            playerState.escaped = true;
+            playerState.gameOver = true;
+        }    
+    }
 }
     

@@ -20,4 +20,5 @@ public class PlayerState : MonoBehaviour
     public bool gameOver;
     public bool isValidMonsterMovement;
     public bool spellCooldown;
+    public bool escaped = false;
 }
