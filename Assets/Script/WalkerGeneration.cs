@@ -12,6 +12,7 @@ public class WalkerGeneration : MonoBehaviour
     public int tileCount = 0;
     public float fillPercentage = .4f;
     public float waitTime = .01f;
+    public bool tileReavel = false;
 
     public void Generate(Cell[,] dungeon){
         InitializeGrid(dungeon);
@@ -133,7 +134,7 @@ public class WalkerGeneration : MonoBehaviour
 
     private void SetEmpty(Cell cell){
         cell.type = Cell.Type.Empty;
-        cell.revealed = false;
+        cell.revealed = tileReavel;
     }
 
     private void CreateWalls(Cell[,] dungeon){
@@ -163,5 +164,6 @@ public class WalkerGeneration : MonoBehaviour
         int index = Random.Range(0, walkers.Count - 1);
         Vector3Int pos = walkers[index].position;
         dungeon[pos.x, pos.y].type = Cell.Type.Exit;
+        Debug.Log("Exit Generate");
     }
 }

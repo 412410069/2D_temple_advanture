@@ -583,7 +583,7 @@ MonoBehaviour:
   tileNum8: {fileID: 11400000, guid: a024f0ec3c7ea0c4f9e2688e4c77b60f, type: 2}
   tileWall: {fileID: 11400000, guid: 2edb705550d3d934db8b977cc697a584, type: 2}
   tileVoid: {fileID: 11400000, guid: 1f98f6970b7fce24a97d80bfb07728b6, type: 2}
-  tileExit: {fileID: 0}
+  tileExit: {fileID: 11400000, guid: 1735121839f70a64e87f9b212a625f67, type: 2}
 --- !u!224 &226764724 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2574830592787834891, guid: dce72c10ab8074091a016db4149951c4, type: 3}
@@ -691,6 +691,7 @@ MonoBehaviour:
   tileCount: 0
   fillPercentage: 0.4
   waitTime: 0.05
+  tileReavel: 1
 --- !u!114 &247440036
 MonoBehaviour:
   m_ObjectHideFlags: 0
