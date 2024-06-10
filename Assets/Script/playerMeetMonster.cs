@@ -25,7 +25,7 @@ public class playerMeetMonster : MonoBehaviour
             Debug.Log("meet monster1!");
             playermeetMonsterAndEndGame();
         }
-        else if(collision2D.gameObject.tag == "monster2"){
+        else if(collision2D.gameObject.tag == "monsterWithView"){
             Debug.Log("meet monster2!");
             playermeetMonsterAndEndGame();
         }
