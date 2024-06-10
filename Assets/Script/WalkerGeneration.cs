@@ -53,7 +53,14 @@ public class WalkerGeneration : MonoBehaviour
     }
 
     private void CreateEmptys(Cell[,] dungeon){
+        SetEmpty(dungeon[dungeon.GetLength(0) / 2, dungeon.GetLength(1) / 2]);
+        
         while((float)tileCount / (float)dungeon.Length < fillPercentage){
+            ChanceToRemove();
+            ChanceToRedirect();
+            ChanceToCreate();
+            UpdatePosition(dungeon);
+            
             //bool hasCreatedEmpty = false;
             foreach(WalkerObject curWalker in walkers){
                 Vector3Int curPos = curWalker.position;
@@ -65,11 +72,6 @@ public class WalkerGeneration : MonoBehaviour
                 }
             }
             
-            ChanceToRemove();
-            ChanceToRedirect();
-            ChanceToCreate();
-            UpdatePosition(dungeon);
-
             // if(hasCreatedEmpty){
             //     yield return new WaitForSeconds(waitTime);
             // }
