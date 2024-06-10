@@ -4624,7 +4624,7 @@ MonoBehaviour:
   secondRate: 1
   searchMineTimer: 0
   searchMineTime: 0
-  defultSearchMineTime: 10
+  defultSearchMineTime: 5
   getCellLogic: {fileID: 0}
 --- !u!114 &1751122397
 MonoBehaviour:

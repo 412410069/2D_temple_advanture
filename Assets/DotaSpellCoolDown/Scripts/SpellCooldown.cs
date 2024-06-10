@@ -15,7 +15,7 @@ public class SpellCooldown : MonoBehaviour
 
     //variable for looking after the cooldown
     private bool isCoolDown = false;
-    private float cooldownTime = 10.0f;
+    private float cooldownTime = 4.3f;
     private float cooldownTimer = 0.0f;
     public PlayerState playerState;
     // Start is called before the first frame update
