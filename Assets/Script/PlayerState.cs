@@ -21,4 +21,5 @@ public class PlayerState : MonoBehaviour
     public bool isValidMonsterMovement;
     public bool spellCooldown;
     public bool escaped = false;
+    public int scoreCount;
 }

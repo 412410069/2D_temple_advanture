@@ -54,6 +54,7 @@ public class Game : MonoBehaviour
 
     private void NewGame(){
         state = new Cell[width, height];    //state 紀錄的是地圖上所有地磚的狀態
+        playerState.scoreCount = 0;
         
         GenerateCells();
         walkerGeneration.Generate(state);
@@ -173,6 +174,7 @@ public class Game : MonoBehaviour
         skill_Q.isValidSearchMine(playerState, board, GameObject.Find("Grid").GetComponent<Game>(), state);
         skill_E.forceMonster(playerState, board);
         glowGrid.glow(board.Tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)), state);
+        Debug.Log(playerState.scoreCount);
     }
 
     void PlayerEscape(){
@@ -182,6 +184,12 @@ public class Game : MonoBehaviour
             playerState.escaped = true;
             playerState.gameOver = true;
         }    
+    }
+
+    public void CheckHighScore(){
+        if (playerState.scoreCount > PlayerPrefs.GetInt("HighScore",0)){
+            PlayerPrefs.SetInt("HighScore", playerState.scoreCount);
+        }
     }
 }
     

@@ -41,6 +41,7 @@ public class Skill_Q : MonoBehaviour
                 return;
             }
             cell.revealed = true;
+            playerState.scoreCount++;
             state[cellPosition.x,cellPosition.y] = cell;
             board.Draw(state);    
             searchMineTime = defultSearchMineTime;

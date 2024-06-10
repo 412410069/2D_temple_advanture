@@ -10,7 +10,7 @@ public class TileRevealLogic : MonoBehaviour
         Cell cell = state[x, y];
         
         if(cell.type == Cell.Type.Empty){
-            Flood(cell, state);
+            Flood(playerState,cell, state);
         }
         //hey hey
         cell.revealed = true;
@@ -19,22 +19,23 @@ public class TileRevealLogic : MonoBehaviour
     }
 
 
-    private void Flood(Cell cell, Cell[, ] state){
+    private void Flood(PlayerState playerState,Cell cell, Cell[, ] state){
         if(cell.revealed) return;
         if(cell.type == Cell.Type.Mine || cell.type == Cell.Type.Wall) return;
 
         cell.revealed = true;
+        playerState.scoreCount++;
         state[cell.position.x, cell.position.y] = cell;
 
         if(cell.type == Cell.Type.Empty){
-            Flood(state[cell.position.x + 1, cell.position.y], state);
-            Flood(state[cell.position.x + 1, cell.position.y + 1], state);
-            Flood(state[cell.position.x, cell.position.y + 1], state);
-            Flood(state[cell.position.x - 1, cell.position.y + 1], state);
-            Flood(state[cell.position.x - 1, cell.position.y], state);
-            Flood(state[cell.position.x - 1, cell.position.y - 1], state);
-            Flood(state[cell.position.x, cell.position.y - 1], state);
-            Flood(state[cell.position.x + 1, cell.position.y - 1], state);
+            Flood(playerState,state[cell.position.x + 1, cell.position.y], state);
+            Flood(playerState,state[cell.position.x + 1, cell.position.y + 1], state);
+            Flood(playerState,state[cell.position.x, cell.position.y + 1], state);
+            Flood(playerState,state[cell.position.x - 1, cell.position.y + 1], state);
+            Flood(playerState,state[cell.position.x - 1, cell.position.y], state);
+            Flood(playerState,state[cell.position.x - 1, cell.position.y - 1], state);
+            Flood(playerState,state[cell.position.x, cell.position.y - 1], state);
+            Flood(playerState,state[cell.position.x + 1, cell.position.y - 1], state);
         }
     }
 }
