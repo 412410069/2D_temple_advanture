@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Monster1Movement : MonoBehaviour
-{
+{   
     public Game game;
     public PlayerState playerState;
     public Board board;
@@ -31,7 +31,7 @@ public class Monster1Movement : MonoBehaviour
     private int y;
 
     private int direction;
-
+    
     void Awake(){
         game = GameObject.FindGameObjectWithTag("grid").GetComponent<Game>();
         playerState = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerState>();
@@ -199,8 +199,9 @@ public class Monster1Movement : MonoBehaviour
         int monster_x = (int)transform.position.x;
         int monster_y = (int)transform.position.y;
         if (game.state[monster_x,monster_y].revealed &&game.state[monster_x,monster_y].type == Cell.Type.Mine){
+            GetComponent<MonsterDeathEffect>().DeathEffect(20);
             Destroy(gameObject);
-            game.state[monster_x,monster_y].type = Cell.Type.Exploded;
+            game.state[monster_x,monster_y].type = Cell.Type.Exploded; 
         }
     }
 }
