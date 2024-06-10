@@ -42,6 +42,6 @@ public class playerMeetMonster : MonoBehaviour
     public void playermeetMonsterAndEndGame(){
          playerState.gameOver = true;
             playerState.meetMonster = true;
-            gameOverLogic.gameOver();
+            // gameOverLogic.gameOver();
     }
 }

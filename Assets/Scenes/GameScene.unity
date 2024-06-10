@@ -1230,7 +1230,7 @@ GameObject:
   - component: {fileID: 517511499}
   - component: {fileID: 517511498}
   m_Layer: 5
-  m_Name: BackGroundBlur
+  m_Name: BackgroundBlur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1255,7 +1255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 0.00097656}
+  m_AnchoredPosition: {x: 0.000030518, y: -0.0000000025029}
   m_SizeDelta: {x: 882, y: 437.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517511498
@@ -2805,7 +2805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1088702724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2901,7 +2901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c336ea112da16bc48a426939c10a6ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitScene: {fileID: 1088702723}
+  exitScene: {fileID: 0}
+  playerState: {fileID: 0}
 --- !u!1001 &1093204300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4735,7 +4736,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1088702729}
         m_TargetAssemblyTypeName: GameOverLogic, Assembly-CSharp
-        m_MethodName: backToMainMenu
+        m_MethodName: BackToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

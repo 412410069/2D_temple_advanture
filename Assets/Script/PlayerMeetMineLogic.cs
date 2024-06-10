@@ -15,7 +15,7 @@ public class PlayerMeetMineLogic : MonoBehaviour
                 Debug.Log("meet mine!");
                 playerState.meetMine = true;
                 playerState.gameOver = true;
-                gameOverLogic.gameOver();             //還沒辦法找到ExitScene
+                // gameOverLogic.gameOver();             //還沒辦法找到ExitScene
             }
         }
     }
