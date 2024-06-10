@@ -8,7 +8,7 @@ public class Skill_Q : MonoBehaviour
     public float secondRate = 1;//
     public float searchMineTimer;
     public float searchMineTime;
-    public float defultSearchMineTime = 10; 
+    public float defultSearchMineTime = 5; 
     public GetCellLogic getCellLogic;
 
     private void Awake(){
